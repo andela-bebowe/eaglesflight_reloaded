@@ -1,8 +1,10 @@
 deployment:
-  staging:
+  production:
     branch: master
     heroku:
       appname: eagles-flight
+    commands:
+      - heroku run rake db:migrate
 machine:
   ruby:
     version: 2.2.3
