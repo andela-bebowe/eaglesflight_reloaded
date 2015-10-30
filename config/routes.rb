@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root "sessions#new"
-  get "signup" => "identities#new"
   get "login" => "sessions#new"
-  get "auth/:provider/callback" => "sessions#create"
-  get "auth/failure" => redirect("/")
+  post "/auth/identity/callback" => "sessions#create"
+  get "/auth/:provider/callback" => "sessions#create"
+  get "failure" => "sessions#failure"
+  get "/auth/failure" => redirect("/failure")
   get "logout" => "sessions#destroy"
 
+  resources :users
   resources :identities
 end

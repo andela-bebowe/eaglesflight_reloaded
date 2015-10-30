@@ -8,19 +8,20 @@
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <%=render 'layouts/shim'%>
+    <%=render "layouts/shim"%>
 </head>
 
 <body>
-  <%=render 'layouts/header'%>
-    <div class="mycontainer">
+  <%=render "layouts/header"%>
+    <div class="container-fluid">
       <% flash.each do |message_type, message| %>
-        <div class="messager alert alert-<%= message_type %>">
+        <div class="text-center messager messager-<%= message_type %>">
           <%= message %>
         </div>
-        <%end%>
-          <%= yield %>
-            <%=render 'layouts/footer'%>
+      <%end%>
+      <%= yield %>
+  </div>
+<%=render "layouts/footer"%>
 </body>
 
 </html>

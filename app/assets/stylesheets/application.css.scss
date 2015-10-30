@@ -1,3 +1,61 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-social";
+@import "footer-distributed";
+
+.form-wrapper
+{
+	width: 50%;
+	height: 70%;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px;
+	border:  1px solid #ccc;
+	border-radius:  4px;
+	-moz-border-radius: 4px;
+	background-color: rgba(255,255,255,0.8);
+}
+.login
+{
+	margin-left: -13px;
+	margin-top: 8px;
+}
+#mybutton
+{
+	margin-top: -21px;
+}
+body
+{
+	background-image:url("http://www.hdwallpapers.in/download/aeroplane-1920x1080.jpg");
+}
+h2
+{
+	color: white;
+}
+.align
+{
+	margin-top: 100px;
+}
+.headsup
+{
+	a{color: white; letter-spacing: 2px;font-size: 20px;}
+	background-color: rgba(0, 0, 0, 0.3);
+	a:hover{color: black;font-size: 20px;}
+	.dropdown-menu a{color: white; letter-spacing: 2px;}
+	 .navbar-right li:hover{background-color: rgba(0, 0, 0, 0.3);}
+}
+.messager
+{
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+	margin-top: 20px;
+}
+.iconate
+{
+	color: white;
+	font-size: 35px;
+}
+.iconate:hover{color: black}

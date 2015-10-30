@@ -1,20 +1,35 @@
-<%= form_tag "/auth/identity/register" do %>
-  <div class="field">
-    <%= render "layouts/errors", object: @identity %>
-    <%= label_tag :name %><br>
-    <%= text_field_tag :name, @identity.try(:name) %>
+<%provide(:title, "Sign up")%>
+<div class="align">
+  <h2 class="text-center">Sign up</h2>
+  <div class="form-wrapper">
+    <%= form_tag "/auth/identity/register", class:"form-horizontal"%>
+      <%= render "layouts/errors", object: @identity %>
+      <div class="form-group">
+        <%= label_tag :name, "Name", class:"control-label"%>
+        <div class="col-md-9">
+          <%= text_field_tag :name, @identity.try(:name), class:"form-control", placeholder:"Blessing Ebowe"%>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= label_tag :email, "Email", class:"control-label"%>
+        <div class="col-md-9">
+          <%= text_field_tag :email, @identity.try(:email), class:"form-control", placeholder:"eaglesflight@gmail.com"%>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= label_tag :password, "Password", class:"control-label" %>
+        <div class="col-md-9">
+          <%= password_field_tag :password, "", class:"form-control", placeholder:"************"%>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= label_tag :password_confirmation, "Confirm Password", class:"control-label" %>
+        <div class="col-md-9">
+          <%= password_field_tag :password_confirmation, "", class:"form-control", placeholder:"************"%>
+        </div>
+      </div><br/>
+      <div class="form-group col-md-5" id="mybutton">
+        <button class="btn btn-block btn-social btn-mine" type="submit"><i class="fa fa-sign-in"></i>Submit</button>
+      </div>
   </div>
-  <div class="field">
-    <%= label_tag :email %><br>
-    <%= text_field_tag :email, @identity.try(:email) %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="field">
-    <%= label_tag :password_confirmation %><br>
-    <%= password_field_tag :password_confirmation %>
-  </div>
-  <div class="actions"><%= submit_tag "Register" %></div>
-<% end %>
+</div>
