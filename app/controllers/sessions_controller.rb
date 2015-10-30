@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
   def failure
     redirect_to root_path
-    flash[:warning] = "Aunthentication failed, Try again"
+    flash[:warning] = "Authentication failed, Try again"
   end
 
   def destroy
