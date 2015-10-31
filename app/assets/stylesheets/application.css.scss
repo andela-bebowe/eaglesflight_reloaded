@@ -64,3 +64,12 @@ h2
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
+.my-table
+{
+	margin-top: 100px;
+	background-color: rgba(255,255,255,0.8);
+}
+.my-passenger
+{
+	width: auto;
+}

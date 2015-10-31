@@ -16,6 +16,10 @@ class Flight < ActiveRecord::Base
     date.map{|date|date.strftime("%B %-d, %Y")}.uniq
   end
 
+  def self.my_obj(id)
+    Flight.where(id: id).first
+  end
+
   def date
     self.departure_date.strftime("%B %-d, %Y")
   end

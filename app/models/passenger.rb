@@ -3,5 +3,5 @@ class Passenger < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, presence: true, length: {maximum: 50, minimum: 4}
   validates :email, presence: true, length: {maximum: 100, minimum: 4}, uniqueness: {case_sensitive: false}, format: {with: VALID_EMAIL_REGEX}
-  has_many :booking_records, :foreign_key => :passenger_id, :class_name => "Booking"
+  belongs_to :booking
 end

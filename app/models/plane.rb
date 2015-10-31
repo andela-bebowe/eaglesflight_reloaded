@@ -4,7 +4,7 @@ class Plane < ActiveRecord::Base
   validates :name, presence: true
 
   def self.available(id)
-    Plane.where(flight_id:  id).pluck(:name, :airline_id)
+    Plane.where(flight_id:  id).pluck(:name, :airline_id, :id)
   end
 
   def self.plane_name(flight_id)
@@ -17,13 +17,23 @@ class Plane < ActiveRecord::Base
     @owner_id
   end
 
+  def self.my_id
+    @my_id
+  end
+
+  def self.obj(id)
+    Plane.where(id: id).first
+  end
+
   private
     def self.make_available
       @name = []
       @owner_id = []
+      @my_id = []
       available(@flight_id).each do |item|
         @name << item[0]
         @owner_id << item[1].to_i
+        @my_id << item[2].to_i
       end
     end
 end

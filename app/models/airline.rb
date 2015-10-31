@@ -12,6 +12,10 @@ class Airline < ActiveRecord::Base
     @name
   end
 
+  def self.my_obj(id)
+    Airline.where(:id => id).pluck(:name).shift
+  end
+
   def self.price
     @price
   end
