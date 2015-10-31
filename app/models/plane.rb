@@ -13,7 +13,7 @@ class Plane < ActiveRecord::Base
     @name
   end
 
-  def self.owner_id
+  def self.airline_id
     @owner_id
   end
 

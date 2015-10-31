@@ -1,0 +1,43 @@
+<%flights = @flight%>
+<%a_name = nil%>
+<% num = params[:flight][:booking][:no_of_passengers].to_i %>
+<div class="row">
+  <div class="col-sm-6">
+    <h5 class="text-center">From:  <%=Airport.position(params[:flight][:departure_id])%></h5>
+  </div>
+  <div class="col-sm-6">
+    <h5 class="text-center">To:  <%=Airport.position(params[:flight][:destination_id])%></h5>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Pick</th>
+        <th>Airlines</th>
+        <th>Planes</th>
+        <th>Date of Departure</th>
+        <th>Time of Departure</th>
+        <th>Price for <%=num%></th>
+    </tr>
+  </thead>
+    <tbody>
+      <% flights.each do |flight|%>
+        <%Plane.plane_name(flight.id).each do |plane|%>
+          <%a_name = Airline.the_name if a_name.blank?%>
+          <%price = Airline.price%>
+          <% cost = (number_to_currency(((price.shift + flight.price)* num), :unit => "$")) %>
+          <tr>
+            <td><%=radio_button_tag :flight_id, flight.id%></td>
+            <td><%=a_name.shift%></td>
+            <td><%=plane%></td>
+            <td><%=flight.date%></td>
+            <td><%=flight.time%></td>
+            <td><%=cost%></td>
+          </tr>
+        <%end%>
+      <%end%>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-block btn-mine" type="submit" name=nil>BOOK</button>

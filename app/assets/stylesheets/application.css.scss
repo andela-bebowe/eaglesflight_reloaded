@@ -7,7 +7,7 @@
 {
 	width: 50%;
 	height: 70%;
-	margin-top: 30px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-right: auto;
 	margin-left: auto;
@@ -28,10 +28,12 @@
 }
 body
 {
+	color:black;
 	background-image:url("http://www.hdwallpapers.in/download/aeroplane-1920x1080.jpg");
 }
 h2
 {
+	margin-top: 50px;
 	color: white;
 }
 .align
@@ -59,3 +61,6 @@ h2
 	font-size: 35px;
 }
 .iconate:hover{color: black}
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}

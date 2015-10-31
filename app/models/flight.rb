@@ -13,7 +13,7 @@ class Flight < ActiveRecord::Base
 
   def self.formatted_departure_date
     date = get_date
-    date.map{|date|date.strftime("%B %-d, %Y")}
+    date.map{|date|date.strftime("%B %-d, %Y")}.uniq
   end
 
   def date
@@ -27,10 +27,9 @@ class Flight < ActiveRecord::Base
     if params[:flight]
       date = params[:flight][:departure_date].to_date
       date = date.beginning_of_day..date.end_of_day
-      dest_id = params[:flight][:destination_id].to_i
-      dept_id = params[:flight][:departure_id].to_i
+      dest_id = params[:flight][:destination_id]
+      dept_id = params[:flight][:departure_id]
       self.where(destination_id: dest_id, departure_id:  dept_id, departure_date: date)
-    else
     end
   end
 end

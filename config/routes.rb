@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "sessions#new"
+  root "flights#index"
   get "login" => "sessions#new"
   post "/auth/identity/callback" => "sessions#create"
   get "/auth/:provider/callback" => "sessions#create"
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/auth/failure" => redirect("/failure")
   get "logout" => "sessions#destroy"
 
-  resources :users
   resources :identities
+  resources :flights
+  resources :bookings
 end
