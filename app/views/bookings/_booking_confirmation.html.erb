@@ -1,0 +1,43 @@
+<%provide(title: "Booking Confirmation")%>
+<%dest = @booking.flight.destination%>
+<%dept = @booking.flight.departure%>
+<div class="col-sm-3">
+  <table class="table text-center my-table">
+    <tr>
+      <td>Ticket No</td>
+      <td><%=@booking.ticket_no%></td>
+    </tr>
+    <tr>
+      <td>Destination Airport</td>
+      <td><%=Airport.position(dest.id)%></td>
+    </tr>
+    <tr>
+      <td>Departure Airport</td>
+      <td><%=Airport.position(dept.id)%></td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td><%=@booking.flight.date%></td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td><%=@booking.flight.time%></td>
+    </tr>
+    <tr>
+      <td>Airline</td>
+      <td><%=@booking.plane.airline.name%></td>
+    </tr>
+    <tr>
+      <td>Plane</td>
+      <td><%=@booking.plane.name%></td>
+    </tr>
+    <tr>
+      <td>No of Tickets</td>
+      <td><%=@booking.no_of_passengers%></td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td><%=@booking.cost%></td>
+    </tr>
+  </table>
+</div>

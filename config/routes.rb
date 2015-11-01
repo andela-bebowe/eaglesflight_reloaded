@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :identities
   resources :flights
   resources :bookings
+  resources :passengers, only: [:create]
 end

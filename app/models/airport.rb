@@ -12,4 +12,5 @@ class Airport < ActiveRecord::Base
     airport = Airport.where(id: id.to_i).pluck(:location, :name)
     "#{airport[0][1]}, #{airport[0][0]}"
   end
+
 end

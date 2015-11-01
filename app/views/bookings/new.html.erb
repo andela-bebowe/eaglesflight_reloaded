@@ -31,26 +31,30 @@
             <td><%=@num%></td>
           </tr>
           <tr>
-            <td>Cost for <%=pluralize(@num, "ticket")%></td>
-            <td><%=@cost%></td>
+            <td>Cost</td>
+            <td><%=cost = (number_to_currency(((@price + @flight.price)* @num), :unit => "$"))%></td>
           </tr>
         </table>
   </div>
   <div class="col-sm-6">
-    <%= form_for @booking do |f| %>
-      <%= render "layouts/errors", object: @booking %>
+    <%= form_for @booking_form do |f| %>
+      <%= f.hidden_field :flight_id, value: @flight.id %>
+      <%= f.hidden_field :plane_id, value: params[:plane_id] %>
+      <%= f.hidden_field :cost, value: cost %>
+      <%= f.hidden_field :no_of_passengers, value: @num %>
       <h3 class="text-center">Fill in Passenger Details below</h3>
       <div class="form-wrapper my-passenger">
         <%@num.times do |index|%>
-          <%= f.fields_for :passenger do |p| %>
+          <%= f.fields_for :passengers do |p| %>
+            <%= render "layouts/errors", object: @booking %>
             <div class="form-group">
               <h4><%="Passenger #{index+1}"%></h4>
               <%= p.label :name, "Name", class:"control-label"%>
-              <%= p.text_field :name, class: "form-control", placeholder:"Blessing Ebowe"%>
+              <%= p.text_field :name, class: "form-control", placeholder:"Blessing Ebowe", required:true%>
             </div>
             <div class="form-group">
               <%= p.label :email, "Email", class:"control-label"%>
-              <%= p.email_field :email, class:"form-control", placeholder:"eaglesflight@gmail.com"%>
+              <%= p.email_field :email, class:"form-control", placeholder:"eaglesflight@gmail.com", required:true %>
             </div>
             <% end %>
         <%end%>

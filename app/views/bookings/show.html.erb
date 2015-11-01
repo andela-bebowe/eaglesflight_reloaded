@@ -1,0 +1,23 @@
+<div class="row my-ticket">
+  <%=render "bookings/booking_confirmation"%>
+  <div class="col-sm-6">
+    <h3 class="text-center">Passenger Info</h3>
+    <div class="form-wrapper my-passenger">
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+        <% @booking.passengers.each_with_index do |passenger, i| %>
+        <tr>
+          <td><%="Passenger #{i+1}"%></td>
+          <td><%="#{passenger.name}"%></td>
+          <td><%="#{passenger.email}"%></td>
+        </tr>
+        <% end %>
+        <%=link_to "Back to Flights", root_path, class:"btn btn-block btn-mine"%>
+      </table>
+    </div>
+  </div>
+</div>
