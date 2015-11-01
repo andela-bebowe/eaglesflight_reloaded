@@ -1,37 +1,38 @@
 <%provide(title: "Booking")%>
-<%plane  = Plane.obj(params[:plane_id])%>
-<%flight = Flight.my_obj(plane.flight_id)%>
-<%num = params[:no_of_passengers].to_i%>
 <div class="row my-ticket">
   <div class="col-sm-3">
         <table class="table text-center my-table">
           <tr>
             <td>Destination Airport</td>
-            <td><%=Airport.position(flight.destination_id)%></td>
+            <td><%=@dest%></td>
           </tr>
           <tr>
             <td>Departure Airport</td>
-            <td><%=Airport.position(flight.departure_id)%></td>
+            <td><%=@dept%></td>
           </tr>
           <tr>
             <td>Date</td>
-            <td><%=flight.date%></td>
+            <td><%=@flight.date%></td>
           </tr>
           <tr>
             <td>Time</td>
-            <td><%=flight.time%></td>
+            <td><%=@flight.time%></td>
           </tr>
           <tr>
             <td>Airline</td>
-            <td><%=Airline.my_obj(plane.airline_id)%></td>
+            <td><%=@airline%></td>
           </tr>
           <tr>
             <td>Plane</td>
-            <td><%=plane.name%></td>
+            <td><%=@plane.name%></td>
           </tr>
           <tr>
             <td>No of Tickets</td>
-            <td><%=num%></td>
+            <td><%=@num%></td>
+          </tr>
+          <tr>
+            <td>Cost for <%=pluralize(@num, "ticket")%></td>
+            <td><%=@cost%></td>
           </tr>
         </table>
   </div>
@@ -40,14 +41,15 @@
       <%= render "layouts/errors", object: @booking %>
       <h3 class="text-center">Fill in Passenger Details below</h3>
       <div class="form-wrapper my-passenger">
-        <%num.times do |index|%>
+        <%@num.times do |index|%>
           <%= f.fields_for :passenger do |p| %>
             <div class="form-group">
-              <%= p.label :name, "Passenger #{index+1} Name", class:"control-label"%>
+              <h4><%="Passenger #{index+1}"%></h4>
+              <%= p.label :name, "Name", class:"control-label"%>
               <%= p.text_field :name, class: "form-control", placeholder:"Blessing Ebowe"%>
             </div>
             <div class="form-group">
-              <%= p.label :email, "Passenger #{index+1} Email", class:"control-label"%>
+              <%= p.label :email, "Email", class:"control-label"%>
               <%= p.email_field :email, class:"form-control", placeholder:"eaglesflight@gmail.com"%>
             </div>
             <% end %>
