@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "failure" => "sessions#failure"
   get "/auth/failure" => redirect("/failure")
   get "logout" => "sessions#destroy"
+  get "mybooking" => "users#show"
 
   resources :identities, only: [:new]
   resources :flights, only: [:index]

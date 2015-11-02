@@ -55,7 +55,7 @@
     <%=form_tag new_booking_path, method: "get" do %>
       <%=render "flights/flights_table", :flights => @flight%>
       <%=hidden_field_tag :no_of_passengers, params[:flight][:booking][:no_of_passengers].to_i%>
-      <button class="btn btn-block btn-mine" type="submit" name=nil>BOOK</button>
+      <button class="btn btn-block btn-mine" type="submit" id="booker" name=nil disabled="true">BOOK</button>
     <% end %>
   </div>
 <%end%>

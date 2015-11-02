@@ -15,4 +15,9 @@ class User < ActiveRecord::Base
       user.email = info["email"]
     end
   end
+
+  def all_bookings
+    self.bookings
+  end
+
 end
