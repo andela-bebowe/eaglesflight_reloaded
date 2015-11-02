@@ -12,17 +12,18 @@ class Airline < ActiveRecord::Base
     @name
   end
 
-  def self.my_obj(id)
-    Airline.where(:id => id).pluck(:name).shift
-  end
-
-  def self.my_price(id)
-    Airline.where(:id => id).pluck(:price).shift
-  end
-
   def self.price
     @price
   end
+
+  def self.my_obj(id)
+    self.where(:id => id).pluck(:name).shift
+  end
+
+  def self.my_price(id)
+    self.where(:id => id).pluck(:price).shift
+  end
+
 
   private
     def self.get_attr

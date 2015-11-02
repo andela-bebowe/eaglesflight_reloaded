@@ -4,7 +4,7 @@ class Plane < ActiveRecord::Base
   validates :name, presence: true
 
   def self.available(id)
-    Plane.where(flight_id:  id).pluck(:name, :airline_id, :id)
+    self.where(flight_id: id).pluck(:name, :airline_id, :id)
   end
 
   def self.plane_name(flight_id)
@@ -22,7 +22,7 @@ class Plane < ActiveRecord::Base
   end
 
   def self.obj(id)
-    Plane.where(id: id).first
+    self.where(id: id).first
   end
 
   private

@@ -17,7 +17,7 @@ class Flight < ActiveRecord::Base
   end
 
   def self.my_obj(id)
-    Flight.where(id: id).first
+    self.where(id: id).first
   end
 
   def date
