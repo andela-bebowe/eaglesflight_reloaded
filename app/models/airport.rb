@@ -10,7 +10,8 @@ class Airport < ActiveRecord::Base
 
   def  self.position(id)
     airport = Airport.where(id: id.to_i).pluck(:location, :name)
-    "#{airport[0][1]}, #{airport[0][0]}"
+    airport = airport[0]
+    "#{airport[1]}, #{airport[0]}"
   end
 
 end

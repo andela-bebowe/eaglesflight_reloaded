@@ -33,7 +33,7 @@
               <%=f.fields_for :booking do |booking_form|%>
                 <div class="form-group">
                   <%=booking_form.label :no_of_passengers, "How many people?", class:"control-label"%>
-                  <%=booking_form.select :no_of_passengers, options_for_select([[1,1], [2,2], [3,3], [4,4] ,[5,5]]), {}, class:"form-control"%>
+                  <%=booking_form.select :no_of_passengers, options_for_select(no_of_passengers_arr), {}, class:"form-control"%>
                 </div>
               <%end%>
             </div>
@@ -53,7 +53,7 @@
   <h2 class="text-center">Make a choice of Flight.</h2>
   <div class="form-wrapper">
     <%=form_tag new_booking_path, method: "get" do %>
-      <%=render "flights/flights_table"%>
+      <%=render "flights/flights_table", :flights => @flight%>
       <%=hidden_field_tag :no_of_passengers, params[:flight][:booking][:no_of_passengers].to_i%>
       <button class="btn btn-block btn-mine" type="submit" name=nil>BOOK</button>
     <% end %>

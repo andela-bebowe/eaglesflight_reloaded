@@ -29,11 +29,13 @@ class Flight < ActiveRecord::Base
 
   def self.search(params)
     if params[:flight]
-      date = params[:flight][:departure_date].to_date
+      flight = params[:flight]
+      date = flight[:departure_date].to_date
       date = date.beginning_of_day..date.end_of_day
-      dest_id = params[:flight][:destination_id]
-      dept_id = params[:flight][:departure_id]
-      self.where(destination_id: dest_id, departure_id:  dept_id, departure_date: date)
+      dest_id = flight[:destination_id]
+      dept_id = flight[:departure_id]
+      self.where(destination_id: dest_id,
+      departure_id: dept_id, departure_date: date)
     end
   end
 end

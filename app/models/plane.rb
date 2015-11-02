@@ -4,6 +4,9 @@ class Plane < ActiveRecord::Base
   validates :name, presence: true
 
   def self.available(id)
+    @name = []
+    @owner_id = []
+    @my_id = []
     self.where(flight_id: id).pluck(:name, :airline_id, :id)
   end
 
@@ -27,9 +30,6 @@ class Plane < ActiveRecord::Base
 
   private
     def self.make_available
-      @name = []
-      @owner_id = []
-      @my_id = []
       available(@flight_id).each do |item|
         @name << item[0]
         @owner_id << item[1].to_i

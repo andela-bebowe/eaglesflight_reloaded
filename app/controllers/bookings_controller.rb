@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
   def new
     @booking_form = Booking.new
     @booking_form.passengers.build
+    @num = params[:no_of_passengers].to_i
     redirect_to root_path if params[:plane_id].nil?
     setup
   end
@@ -15,6 +16,12 @@ class BookingsController < ApplicationController
     else
       flash[:info] = "Error when booking"
     end
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   def show
