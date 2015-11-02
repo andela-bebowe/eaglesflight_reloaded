@@ -14,7 +14,7 @@ gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.1.0"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem "therubyracer", platforms: :ruby
-gem "mail", "2.6.3"
+# gem "mail", "2.6.3"
 gem "draper", "~> 1.3"
 # Use jquery as the JavaScript library
 gem "jquery-rails"
@@ -47,6 +47,7 @@ group :development, :test do
   gem "spring"
   gem "rspec-rails", "~> 3.0"
   gem "simplecov"
+  gem "launchy", "~> 2.4"
   gem "letter_opener"
   gem "factory_girl_rails"
   gem "capybara"

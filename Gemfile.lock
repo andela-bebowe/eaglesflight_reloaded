@@ -279,8 +279,8 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  launchy (~> 2.4)
   letter_opener
-  mail (= 2.6.3)
   materialize-sass
   omniauth-facebook
   omniauth-identity

@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
     @booking = Booking.create(booking_params)
     if @booking.valid?
       flash[:info] = "Booking was successful"
-        binding.pry
       redirect_to @booking
     else
       flash[:info] = "Error when booking"
@@ -25,6 +24,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    UserMailer.confirmation_email(current_user, @booking).deliver_now
   end
 
   private
