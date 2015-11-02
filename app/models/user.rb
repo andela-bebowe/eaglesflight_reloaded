@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :booking_records, :foreign_key => :user_id, :class_name => "Booking"
-
+  has_many :bookings
   def self.from_omniauth(auth)
     find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_omniauth(auth)
   end

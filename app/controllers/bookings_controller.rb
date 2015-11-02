@@ -14,9 +14,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create(booking_params)
-    
     if @booking.valid?
       flash[:info] = "Booking was successful"
+        binding.pry
       redirect_to @booking
     else
       flash[:info] = "Error when booking"
@@ -29,6 +29,6 @@ class BookingsController < ApplicationController
 
   private
     def booking_params
-      params.require(:booking).permit(:plane_id, :flight_id, :no_of_passengers, :cost, passengers_attributes: [:name, :email])
+      params.require(:booking).permit(:plane_id, :flight_id, :no_of_passengers, :user_id, :cost, passengers_attributes: [:name, :email])
     end
 end

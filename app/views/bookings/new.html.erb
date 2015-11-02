@@ -42,6 +42,9 @@
       <%= f.hidden_field :plane_id, value: params[:plane_id] %>
       <%= f.hidden_field :cost, value: cost %>
       <%= f.hidden_field :no_of_passengers, value: @num %>
+      <%if logged_in?%>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%end%>
       <h3 class="text-center">Fill in Passenger Details below</h3>
       <div class="form-wrapper my-passenger">
         <%@num.times do |index|%>
