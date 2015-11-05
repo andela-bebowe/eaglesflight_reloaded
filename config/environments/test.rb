@@ -37,6 +37,16 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+    OmniAuth.config.mock_auth[:facebook] = {
+      "provider" => "facebook",
+      "uid" => "123456",
+      "info"=>
+      { name: "Blessing Ebowe",
+        email: "blessingebowe@gmail.com",
+        profile_img: "http://graph.facebook.com/1065771400114300/picture"
+      }
+    }
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

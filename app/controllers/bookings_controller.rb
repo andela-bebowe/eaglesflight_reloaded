@@ -25,7 +25,6 @@ class BookingsController < ApplicationController
   end
 
   def update
-    passengers_attributes
     @booking = Booking.find(params[:id])
     if  @booking.update_attributes(params[:booking])
       flash[:info] = "Successfully updated project"

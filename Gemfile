@@ -54,6 +54,7 @@ group :test do
   gem "capybara"
   gem "database_cleaner"
   gem "coveralls", require: false
+  gem 'selenium-webdriver'
 end
 
 group :production do

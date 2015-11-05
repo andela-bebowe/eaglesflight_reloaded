@@ -23,6 +23,10 @@ module BookingsHelper
       passengers_attributes: [:name, :email])
     end
 
+    def booking_update_params
+      
+    end
+
     def setup_plane
       @plane  = Plane.find(params[:plane_id])
       @airline = @plane.airline

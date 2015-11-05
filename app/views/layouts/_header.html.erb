@@ -18,7 +18,7 @@
 					<%if logged_in?%>
 						<li><%= link_to current_user.name, root_path %></li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" href="#">
+							<a class="dropdown-toggle" data-toggle="dropdown" id="mybooking" role="button" aria-expanded="false" aria-haspopup="true" href="#">
 								<% if current_user.profile_img%>
 									<%img = current_user.profile_img%>
 									<%else%>

@@ -1,8 +1,8 @@
 deployment:
-  staging:
+  production:
     branch: master
     commands:
-      - git push https://git.heroku.com/eaglesflight-reloaded.git
+      - git push https://git@heroku.com:eaglesflight-reloaded.git
       - heroku run rake db:migrate --app eaglesflight-reloaded
 machine:
   ruby:
