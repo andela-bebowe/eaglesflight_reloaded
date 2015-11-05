@@ -1,7 +1,8 @@
 # EaglesFlight[![Coverage Status](https://coveralls.io/repos/andela-bebowe/eaglesflight_reloaded/badge.svg?branch=temp&service=github)](https://coveralls.io/github/andela-bebowe/eaglesflight_reloaded?branch=temp)
 [![Code Climate](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/gpa.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded)
-This is a web app that can be used for Flight Booking and Management within Nigeria.
 [![Test Coverage](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/coverage.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/coverage)
+
+This is a web app that can be used for Flight Booking and Management.
 ## Description
 
 * EaglesFlight is hosted on [Heroku](https://eagles-flight.herokuapp.com)
@@ -28,7 +29,7 @@ This is a web app that can be used for Flight Booking and Management within Nige
 
 ## Contributing
 
-1. Fork it ( https://github.com/[andela-bebowe]/eagles_flight/fork )
+1. Fork it ( https://github.com/[andela-bebowe]/eaglesflight_reloaded/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
