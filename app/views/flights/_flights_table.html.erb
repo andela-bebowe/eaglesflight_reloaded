@@ -25,8 +25,9 @@
           <td><%=radio_button_tag :plane_id, plane.id %></td>
           <td><%=airline%></td>
           <td><%=plane%></td>
-          <td><%=flight.date%></td>
-          <td><%=flight.time%></td>
+          <td><%=date(flight)%></td>
+          <td><%=time(flight)%></td>
+          <%binding.pry%>
           <td><%=get_cost(airline, flight, num)%></td>
         </tr>
       <%end%>

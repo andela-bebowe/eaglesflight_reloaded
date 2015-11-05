@@ -16,13 +16,6 @@ class Flight < ActiveRecord::Base
     date.map{|date|date.strftime("%B %-d, %Y")}.uniq
   end
 
-  def date
-    self.departure_date.strftime("%B %-d, %Y")
-  end
-  def time
-    self.departure_date.strftime("%I:%M %p")
-  end
-
   def self.search(params)
     if !params[:flight].nil?
       @flight = params[:flight]

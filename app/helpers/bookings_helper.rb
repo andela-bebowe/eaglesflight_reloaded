@@ -24,13 +24,12 @@ module BookingsHelper
     end
 
     def booking_update_params
-      
+
     end
 
     def setup_plane
       @plane  = Plane.find(params[:plane_id])
       @airline = @plane.airline
-      @price = @airline.price
       @flight = @plane.flight
       setup_airport
     end

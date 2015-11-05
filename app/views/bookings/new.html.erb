@@ -12,11 +12,11 @@
         </tr>
         <tr>
           <td>Date</td>
-          <td><%=@flight.date%></td>
+          <td><%=date(@flight)%></td>
         </tr>
         <tr>
           <td>Time</td>
-          <td><%=@flight.time%></td>
+          <td><%=time(@flight)%></td>
         </tr>
         <tr>
           <td>Airline</td>
@@ -32,8 +32,7 @@
         </tr>
         <tr>
           <td>Cost</td>
-          <td><%=cost = (number_to_currency(((@price + @flight.price)* @num),
-          :unit => "$"))%></td>
+          <td><%=cost = get_cost(@airline, @flight, @num)%></td>
         </tr>
       </table>
   </div>
