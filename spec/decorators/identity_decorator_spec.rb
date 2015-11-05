@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe IdentityDecorator do
+describe "IdentityDecorator" do
 end

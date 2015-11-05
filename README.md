@@ -1,7 +1,7 @@
 # EaglesFlight[![Coverage Status](https://coveralls.io/repos/andela-bebowe/eaglesflight_reloaded/badge.svg?branch=temp&service=github)](https://coveralls.io/github/andela-bebowe/eaglesflight_reloaded?branch=temp)
-
+[![Code Climate](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/gpa.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded)
 This is a web app that can be used for Flight Booking and Management within Nigeria.
-
+[![Test Coverage](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/coverage.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/coverage)
 ## Description
 
 * EaglesFlight is hosted on [Heroku](https://eagles-flight.herokuapp.com)

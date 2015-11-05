@@ -1,10 +1,19 @@
 module BookingsHelper
-  def setup
+  def setup_booking_form
+    @booking_form = Booking.new
+    @booking_form.passengers.build
+    @num = params[:no_of_passengers].to_i
     setup_plane
   end
 
   def no_of_passengers_arr
     [[1,1], [2,2], [3,3], [4,4] ,[5,5]]
+  end
+
+  def save_passengers
+    passengers.each do |passenger|
+      passenger.save(false)
+    end
   end
 
   private
@@ -13,16 +22,18 @@ module BookingsHelper
       permit(:plane_id, :flight_id, :no_of_passengers, :user_id, :cost,
       passengers_attributes: [:name, :email])
     end
+
     def setup_plane
-      @plane  = Plane.obj(params[:plane_id])
-      p_id = @plane.airline_id
-      @flight = Flight.my_obj(@plane.flight_id)
-      @airline = Airline.my_obj(p_id)
-      @price = Airline.my_price(p_id)
-      setup_airport(@flight)
+      @plane  = Plane.find(params[:plane_id])
+      @airline = @plane.airline
+      @price = @airline.price
+      @flight = @plane.flight
+      setup_airport
     end
-    def setup_airport(flight)
-      @dest = Airport.position(flight.destination_id)
-      @dept = Airport.position(flight.departure_id)
+
+    def setup_airport
+      @dest = @flight.destination
+      @dept = @flight.departure
     end
+
 end

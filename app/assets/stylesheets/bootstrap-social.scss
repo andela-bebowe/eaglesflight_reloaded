@@ -1,4 +1,3 @@
-
 $bs-height-base: ($line-height-computed + $padding-base-vertical * 2);
 $bs-height-lg:   (floor($font-size-large * $line-height-base) + $padding-large-vertical * 2);
 $bs-height-sm:   (floor($font-size-small * 1.5) + $padding-small-vertical * 2);
@@ -38,44 +37,6 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1);
       font-size: 1.4em;
     }
   }
-  &.btn-xs {
-    padding-left: ($bs-height-xs + $padding-small-horizontal);
-    > :first-child {
-      line-height: $bs-height-xs;
-      width: $bs-height-xs;
-      font-size: 1.2em;
-    }
-  }
-}
-
-.btn-social-icon {
-  @extend .btn-social;
-  height: ($bs-height-base + 2);
-  width: ($bs-height-base + 2);
-  padding: 0;
-  > :first-child {
-    border: none;
-    text-align: center;
-    width: 100%!important;
-  }
-  &.btn-lg {
-    height: $bs-height-lg;
-    width: $bs-height-lg;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  &.btn-sm {
-    height: ($bs-height-sm + 2);
-    width: ($bs-height-sm + 2);
-    padding-left: 0;
-    padding-right: 0;
-  }
-  &.btn-xs {
-    height: ($bs-height-xs + 2);
-    width: ($bs-height-xs + 2);
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 @mixin btn-social($color-bg, $color: #fff) {
@@ -86,3 +47,4 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1);
 .btn-twitter       { @include btn-social(#55acee); }
 .btn-facebook      { @include btn-social(#3b5998); }
 .btn-mine          { @include btn-social(#3F729B); }
+.btn-alert         { @include btn-social(red); }

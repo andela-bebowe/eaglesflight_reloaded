@@ -1,0 +1,11 @@
+<div class="form-group">
+  <h4><%="Passenger #{num}"%></h4>
+  <%= f.label :name, "Name", class:"control-label"%>
+  <%= f.text_field :name, class: "form-control", placeholder:"Blessing Ebowe",
+  required:true%>
+</div>
+<div class="form-group">
+  <%= f.label :email, "Email", class:"control-label"%>
+  <%= f.email_field :email, class:"form-control",
+  placeholder:"eaglesflight@gmail.com", required:true %>
+</div>

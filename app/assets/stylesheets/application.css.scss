@@ -16,6 +16,7 @@
 	border-radius:  4px;
 	-moz-border-radius: 4px;
 	background-color: rgba(255,255,255,0.8);
+  color: #666;
 }
 .login
 {
@@ -28,13 +29,18 @@
 }
 body
 {
-	color:black;
-	background-image:url("http://www.hdwallpapers.in/download/aeroplane-1920x1080.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.9) 50%, rgba(0,0,0,.9) 50%), url("http://www.hdwallpapers.in/download/aeroplane-1920x1080.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #74B3CE;
+    background-blend-mode: overlay;
+    color: black;
 }
 h2
 {
-	margin-top: 50px;
+	margin-top: 60px;
 	color: white;
+  margin-bottom: 0px;
 }
 .align
 {
@@ -66,10 +72,18 @@ h2
 }
 .my-table
 {
-	margin-top: 100px;
-	background-color: rgba(255,255,255,0.8);
+  color: #666;
+  margin-top: 100px;
+  font-weight: bold;
+  background-color: rgba(255,255,255,.8);
+  padding: 25px;
 }
+.my-table > tbody > tr > td {
+  padding: 15px;
+}
+caption {color: white; text-align: center; font-size: 30px;}
 .my-passenger
 {
+  margin-top: 100px;
 	width: auto;
 }

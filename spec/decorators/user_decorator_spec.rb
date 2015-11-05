@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe UserDecorator do
+describe "UserDecorator" do
 end

@@ -8,10 +8,8 @@ class Airport < ActiveRecord::Base
     Airport.distinct.pluck(:location, :id)
   end
 
-  def  self.position(id)
-    airport = Airport.where(id: id.to_i).pluck(:location, :name)
-    airport = airport[0]
-    "#{airport[1]}, #{airport[0]}"
+  def to_s
+    "#{name}, #{location}"
   end
 
 end

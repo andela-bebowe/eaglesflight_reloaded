@@ -28,8 +28,12 @@
           <%= password_field_tag :password_confirmation, "", class:"form-control", placeholder:"************"%>
         </div>
       </div><br/>
-      <div class="form-group col-md-5" id="mybutton">
-        <button class="btn btn-block btn-social btn-mine" type="submit"><i class="fa fa-sign-in"></i>Submit</button>
+      <div class="form-group col-md-4" id="mybutton">
+        <button class="btn btn-block btn-social btn-mine" type="submit"></i>Sign up</button>
+        <p>OR</p>
+      </div>
+      <div class="form-group col-md-4" id="mybutton">
+        <%= link_to "Login", login_path, class:"btn btn-block btn-social btn-mine"%>
       </div>
   </div>
 </div>

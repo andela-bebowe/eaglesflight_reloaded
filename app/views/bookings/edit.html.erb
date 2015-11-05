@@ -1,0 +1,14 @@
+<h2 class="text-center">Edit Passenger Info</h2>
+<%num = @booking.passengers.count%>
+<%=form_for @booking do |f| %>
+<div class="form-wrapper">
+  <%= f.fields_for :passengers do |builder| %>
+    <%num.times do |index|%>
+      <%=render "bookings/passenger", num: index + 1, :f => builder %>
+    <%end%>
+  <% end %>
+  <%binding.pry%>
+  <button class="btn btn-mine" type="submit">SUBMIT</button>
+</div>
+<% end %>
+</div>

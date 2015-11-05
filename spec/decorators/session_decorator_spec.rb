@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe SessionDecorator do
+describe "SessionDecorator" do
 end
