@@ -1,17 +1,18 @@
 <%provide(:title, "Flights")%>
-
 <%=render "flights/flight_form"%>
 <%if params[:send] && @flight == []%>
   <h2 class="text-center">No Flights in this category</h2>
 <%elsif params[:send] && @flight != []%>
+<div class="search">
   <h2 class="text-center">Make a choice of Flight.</h2>
   <div class="form-wrapper">
+    <%num = params[:flight][:booking][:no_of_passengers].to_i%>
     <%=form_tag new_booking_path, method: "get" do %>
-      <%num = params[:flight][:booking][:no_of_passengers].to_i%>
-      <%=render "flights/flights_table", :flights => @flight, num: num%>
+    <%=render "flights/flights_table", :flights => @flight, num: num%>
       <%=hidden_field_tag :no_of_passengers, num%>
       <button class="btn btn-block btn-mine" type="submit"
       id="booker" name=nil disabled="true">BOOK</button>
     <% end %>
   </div>
+</div>
 <%end%>

@@ -10,21 +10,23 @@ module BookingsHelper
     [[1,1], [2,2], [3,3], [4,4] ,[5,5]]
   end
 
-  def save_passengers
-    passengers.each do |passenger|
-      passenger.save(false)
-    end
-  end
-
   private
+    def authenticate
+      if !logged_in?
+        flash[:warning] = "You have to log in to perform this action!"
+        redirect_to root_path
+      end
+    end
+
     def booking_params
       params.require(:booking).
       permit(:plane_id, :flight_id, :no_of_passengers, :user_id, :cost,
       passengers_attributes: [:name, :email])
     end
 
-    def booking_update_params
-
+    def update_params
+      params.require(:booking).
+      permit(passengers_attributes: [:name, :email, :id])
     end
 
     def setup_plane

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :airline do
-    name "MyString"
-price "9.99"
+    name "Boeing"
+    price 10000
   end
 
 end

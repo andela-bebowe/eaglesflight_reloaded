@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   get "/auth/failure" => redirect("/failure")
   get "logout" => "sessions#destroy"
   get "mybooking" => "users#show"
+  delete "/bookings/:id" => "bookings#destroy", as: :remove
 
   resources :identities, only: [:new]
-  resources :flights, only: [:index]
+  resources :flights
   resources :bookings, except: [:index]
   resources :passengers
 end

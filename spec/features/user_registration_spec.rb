@@ -1,9 +1,9 @@
 require "rails_helper"
-RSpec.feature "User aunthetication" do
+RSpec.feature "User authetication" do
   feature "User login and logout with facebook", :type => :feature do
     before do
       OmniAuth.config.test_mode = true
-      Capybara.default_driver = :selenium
+      # Capybara.default_driver = :selenium
       OmniAuth.config.add_mock(:facebook, {:uid => "123456"})
     end
     scenario "with facebook" do
@@ -27,7 +27,7 @@ RSpec.feature "User aunthetication" do
   feature "User login and logout with identity", :type => :feature do
     before do
       OmniAuth.config.test_mode = false
-      Capybara.default_driver = :selenium
+      # Capybara.default_driver = :selenium
     end
     scenario "with invalid email" do
       sign_up_with "invalidemail", "password"

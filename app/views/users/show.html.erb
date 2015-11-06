@@ -1,4 +1,5 @@
 <%provide(title: "All Bookings")%>
 <%@bookings.each do |booking|%>
   <%=render "bookings/booking", :booking => booking%>
-<% end %>
+<%end%>
+<%= will_paginate @bookings, renderer: BootstrapPagination::Rails %>

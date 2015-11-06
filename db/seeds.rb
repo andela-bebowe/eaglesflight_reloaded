@@ -51,9 +51,11 @@ plane = [
   ["Mails",      3, randi2]
 ]
 
+20.times do
   plane.each do |name, airline_id, flight_id|
   Plane.create(name: name, airline_id: airline_id, flight_id: flight_id)
   end
+end
 airport = [
   ["Konga Airport",               "Konga"],
   ["Konga Airport",               "Kwaga"],

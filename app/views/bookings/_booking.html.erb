@@ -2,8 +2,8 @@
 <%dept = booking.flight_departure%>
 <div class="row booking">
   <h2 class="text-center">Booking Details</h2>
-<div class="col-sm-4 col-sm-offset-2">
-  <table class="table text-center table-responsive table-bordered my-table">
+<div class="col-sm-4 col-sm-offset-2  my-table">
+  <table class="table text-center table-responsive table-bordered">
     <tr>
       <td>Booking Id</td>
       <td><%=booking.id%></td>
@@ -22,15 +22,15 @@
     </tr>
     <tr>
       <td>Date</td>
-      <td><%=booking.flight_date%></td>
+      <td><%=booking.date%></td>
     </tr>
     <tr>
       <td>Time</td>
-      <td><%=booking.flight_time%></td>
+      <td><%=booking.time%></td>
     </tr>
     <tr>
       <td>Airline</td>
-      <td><%=booking.plane.airline.name%></td>
+      <td><%=booking.plane_airline%></td>
     </tr>
     <tr>
       <td>Plane</td>
@@ -45,11 +45,10 @@
       <td><%=booking.cost%></td>
     </tr>
   </table>
-  <%if booking.flight_time > Time.now%>
-    <%= button_to "Cancel Booking", "$(this).up('.booking').remove()",
-    { action: "delete", id: booking.id,
-      class: "btn btn-block btn-alert", name: "deleted"},
-        method: :delete, data: { confirm: "Are you sure?" } %>
+  <%if booking.time > Time.now%>
+    <%= link_to "Cancel Booking", remove_path(booking),
+    class: "btn btn-block btn-danger", method: :delete,
+        data: { confirm: "Are you sure?" } %>
   <%end%>
 </div>
 <%=render "bookings/view_passenger", :booking => booking%>

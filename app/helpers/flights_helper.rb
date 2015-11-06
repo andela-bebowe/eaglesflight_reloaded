@@ -14,4 +14,13 @@ module FlightsHelper
   def time(obj)
     obj.departure_date.strftime("%I:%M %p")
   end
+  def first(obj)
+    obj.first
+  end
+  def dept(obj)
+    first(obj).departure
+  end
+  def dest(obj)
+    first(obj).destination
+  end
 end

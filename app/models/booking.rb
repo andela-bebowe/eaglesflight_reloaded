@@ -1,10 +1,9 @@
 class Booking < ActiveRecord::Base
   before_save :create_ticket_no
-  after_update :save_passengers
 
-  delegate :destination, :departure, :date, :time,
+  delegate :destination, :departure,
   :to => :flight, :prefix => true
-  delegate :name, :to => :plane, :prefix => true
+  delegate :name, :airline, :to => :plane, :prefix => true
 
   belongs_to :user
   belongs_to :plane
@@ -16,15 +15,17 @@ class Booking < ActiveRecord::Base
   reject_if: proc { |attributes| attributes['name'].blank? },
   allow_destroy: true
 
+  def date
+    self.flight.departure_date.strftime("%B %-d, %Y")
+  end
+
+  def time
+    self.flight.departure_date.strftime("%I:%M %p")
+  end
+
   def self.find_booking(params)
     self.where(user_id: params[:user_id], id: params[:id],
     passenger_id: params[:passenger_id])
-  end
-
-  def save_passengers
-   passengers.each do |passenger|
-     passenger.save(false)
-   end
   end
 
   private

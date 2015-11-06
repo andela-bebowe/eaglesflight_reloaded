@@ -1,9 +1,13 @@
 FactoryGirl.define do
   factory :flight do
-    destination_id "MyString"
-departure_id "MyString"
-departure_date "2015-10-30 16:09:01"
-price "9.99"
+    destination_id 2
+    departure_id 1
+    departure_date "2015-10-27"
+    price 3456
+
+    factory :nil_flight do
+      departure_id = 1
+    end
   end
 
 end

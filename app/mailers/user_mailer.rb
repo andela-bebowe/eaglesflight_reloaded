@@ -10,6 +10,6 @@ class UserMailer < ApplicationMailer
     @booking = booking
     @user = user
     @url  = "http://eaglesflight-reloaded.herokuapp.com/"
-    mail(to: @user.email, subject: "Booking Update Confirmation")
+    mail(to: @user.email, subject: "Booking Update")
   end
 end

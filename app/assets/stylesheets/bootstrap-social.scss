@@ -47,4 +47,4 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1);
 .btn-twitter       { @include btn-social(#55acee); }
 .btn-facebook      { @include btn-social(#3b5998); }
 .btn-mine          { @include btn-social(#3F729B); }
-.btn-alert         { @include btn-social(red); }
+.btn-alert         { @include btn-social(#7A1600); }
