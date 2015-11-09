@@ -35,6 +35,7 @@ This is a web app that can be used for Flight Booking and Management.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request.
 
+
 ## Development/Dependencies
 
 * This web app was built using Ruby on Rails.
@@ -42,5 +43,26 @@ This is a web app that can be used for Flight Booking and Management.
   *Omniauth for Authentication
   *Figaro for Environment variables storage
   *Bcrypt for Password security
-  *Mailer for sending mails
   *RSpec for testing.
+
+  Install Ruby
+  Install Rails
+  You also need to make sure that you have rubygems and bundler installed. RubyGems is a package management framework for Ruby and bundler is a ruby gem that helps to manage other external dependencies in a rails application
+
+  Install RubyGems
+  Install Bundler
+  Once you have a copy of this project and it's dependencies installed, you are good to go. run bundle to install all the required external dependencies
+
+  ** Note: To view the project in a web browser, you need to get the rails server up and running. Run rails server from the terminal and browse to the generated link from a web browser
+
+  Running the Tests
+
+  If you have followed the steps outlined earlier, then you can run the tests for the project. You can run all tests from the terminal with this command:
+
+  rspec spec
+  If you need more specific tests, then specify the absolute path to the spec file:
+
+  rspec spec/models/link_spec.rb
+  If you want the tests to read more like a document then pass in these options to the rspec command:
+
+  rspec spec --format doc
