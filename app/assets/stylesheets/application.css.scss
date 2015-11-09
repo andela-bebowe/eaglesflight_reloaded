@@ -2,10 +2,9 @@
 @import "bootstrap";
 @import "bootstrap-social";
 @import "footer-distributed";
-
 .form-wrapper
 {
-	width: 70%;
+	width: 60%;
 	height: 70%;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -19,21 +18,32 @@
   color: #666;
   z-index: 1;
 }
+.paypal img
+{
+  width: 20%;
+	height: 20%;
+	margin-top: 150px;
+  margin-bottom: 100px;
+	margin-right: auto;
+	margin-left: auto;
+  display: block;
+}
+.findme
+{
+  width: 30%;
+	margin-right: auto;
+	margin-left: auto;
+}
 @media screen and (min-width: 240px) and (max-width: 750px)
 {
-  .form-wrapper {
-    width: 100%;
-  }
+  .form-wrapper { width: 100%; }
 }
 .login
 {
 	margin-left: -13px;
 	margin-top: 8px;
 }
-#mybutton
-{
-	margin-top: -21px;
-}
+#mybutton {	margin-top: -21px; }
 body
 {
     background-image: linear-gradient(rgba(0,0,0,.9) 50%,
@@ -51,10 +61,7 @@ h2
 	color: white;
   margin-bottom: 0px;
 }
-.align
-{
-	margin-top: 100px;
-}
+.align { margin-top: 100px; }
 .headsup
 {
 	a{color: white; letter-spacing: 2px;font-size: 20px;}
@@ -67,7 +74,8 @@ h2
 {
 	font-weight: bold;
 	font-size: 25px;
-	margin-top: 20px;
+	margin-top: 40px;
+  margin-bottom: -50px;
 }
 .iconate
 {
@@ -86,9 +94,7 @@ h2
   background-color: rgba(255,255,255,.8);
   padding: 25px;
 }
-.my-table > tbody > tr > td {
-  padding: 15px;
-}
+.my-table > tbody > tr > td { padding: 15px; }
 caption {color: white; text-align: center; font-size: 30px;}
 .my-passenger
 {

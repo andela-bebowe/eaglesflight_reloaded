@@ -38,7 +38,7 @@
   </div>
   <div class="col-sm-6">
     <%= form_for @booking_form do |f| %>
-    <%= render "layouts/errors", object: @booking_form %>
+      <%= render "layouts/errors", object: @booking_form %>
       <%= f.hidden_field :flight_id, value: @flight.id %>
       <%= f.hidden_field :plane_id, value: params[:plane_id] %>
       <%= f.hidden_field :cost, value: cost %>
@@ -46,14 +46,20 @@
       <%if logged_in?%>
         <%= f.hidden_field :user_id, value: current_user.id %>
       <%end%>
+
       <div class="form-wrapper my-passenger">
         <%= f.fields_for :passengers do |passenger| %>
           <%@num.times do |index|%>
             <%=render "bookings/passenger", num: index + 1, :f => passenger %>
           <%end%>
-        <% end %>
+        <%end%>
+        <div class="checkbox">
+          <label>
+            <%=f.check_box :paid_booking, {}, "true", "false"%>For Paid Booking
+          </label>
+        </div>
         <button class="btn btn-mine" type="submit">SUBMIT</button>
       </div>
-    <% end %>
+    <%end%>
   </div>
 </div>

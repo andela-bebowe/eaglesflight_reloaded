@@ -5,10 +5,11 @@ class Booking < ActiveRecord::Base
   :to => :flight, :prefix => true
   delegate :name, :airline, :to => :plane, :prefix => true
 
+  has_one :booker
   belongs_to :user
   belongs_to :plane
   belongs_to :flight
-  has_many :passengers, :dependent => :destroy
+  has_many :passengers, inverse_of: :booking, dependent: :destroy
   validates_associated :passengers
 
   accepts_nested_attributes_for :passengers,
@@ -24,8 +25,8 @@ class Booking < ActiveRecord::Base
   end
 
   def self.find_booking(params)
-    self.where(user_id: params[:user_id], id: params[:id],
-    passenger_id: params[:passenger_id])
+    self.where(id: params[:id],
+    ticket_no: params[:ticket_no]).first
   end
 
   private

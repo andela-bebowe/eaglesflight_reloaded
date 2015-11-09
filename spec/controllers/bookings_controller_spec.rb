@@ -17,7 +17,7 @@ RSpec.describe BookingsController, type: :controller do
     it "should create a booking with passengers successfully" do
       post :create,booking: FactoryGirl.attributes_for(:booking_with_passengers)
 
-      expect(flash[:success]).to eq("Booking was successful.")
+      expect(flash[:success]).to eq("You just got yourself a free booking")
       expect(change(Booking, :booking).by (1))
       expect(response.status).to eq(302)
       expect(change(Booking, :booking).by (1))
@@ -34,6 +34,12 @@ RSpec.describe BookingsController, type: :controller do
       booking = FactoryGirl.create(:booking)
       get :show, id: booking
       response.should render_template :show
+    end
+  end
+  describe "#destroy" do
+    it "should delete the requested booking" do
+      booking = FactoryGirl.create(:booking)
+      expect { delete :destroy, id: booking }.to change(Booking, :count).by(-1)
     end
   end
 end

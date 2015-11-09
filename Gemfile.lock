@@ -20,9 +20,17 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_utils (3.2.0)
+      activesupport (>= 3.2)
+      i18n
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
+    activemerchant (1.54.0)
+      activesupport (>= 3.2.14, < 5.0.0)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (>= 0.6.9)
+      nokogiri (~> 1.4)
     activemodel (4.2.4)
       activesupport (= 4.2.4)
       builder (~> 3.1)
@@ -38,6 +46,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
+    attr_required (1.0.0)
     autoprefixer-rails (6.0.3)
       execjs
       json
@@ -157,6 +166,10 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
+    paypal-express (0.8.1)
+      activesupport (>= 2.3)
+      attr_required (>= 0.0.5)
+      rest-client
     pg (0.18.3)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -282,6 +295,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_utils
+  activemerchant
   bcrypt-ruby
   bootstrap-sass
   byebug
@@ -301,6 +316,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-identity
   omniauth-twitter
+  paypal-express
   pg
   pry
   puma (= 2.11.1)

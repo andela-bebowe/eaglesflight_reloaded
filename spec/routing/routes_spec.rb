@@ -34,6 +34,12 @@ RSpec.describe "routing to controllers", :type => :routing do
       :id => "2"
     )
   end
+  it "routes all_flights path to flights#all_flights" do
+    expect(:get => "/all_flights").to route_to(
+      :controller => "flights",
+      :action => "all_flights"
+    )
+  end
   it "does not give access to identities#create" do
     expect(:get => "/identities").not_to be_routable
   end
