@@ -14,16 +14,16 @@ RSpec.feature "Viewing past Bookings" do
   end
   scenario "Logged in user wants to view past bookings" do
     visit mybooking_path
-    expect(page).to  have_content("Passenger")
-    expect(page).to  have_content("Cost")
-    expect(page).to  have_content("Booking Id")
-    expect(page).to  have_content("Ticket No")
-    expect(page).to  have_content("Time")
+    expect(page).to  have_content ("Passenger")
+    expect(page).to  have_content ("Cost")
+    expect(page).to  have_content ("Booking Id")
+    expect(page).to  have_content ("Ticket No")
+    expect(page).to  have_content ("Time")
   end
   scenario "Logged in user wants to edit past booking" do
     visit findme_path
-    expect(page).to  have_content("Booking Id")
-    expect(page).to  have_content("Ticket No")
+    expect(page).to  have_content ("Booking Id")
+    expect(page).to  have_content ("Ticket No")
     fill_in "Booking Id", with: 1
     fill_in "Ticket No", with: 5002
     click_button "Find Booking"

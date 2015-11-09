@@ -28,7 +28,8 @@ require "database_cleaner"
 # require only the support files necessary.
 #
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-  OmniAuth.config.mock_auth[:facebook] = {
+  OmniAuth.config.mock_auth[:facebook] =
+  {
     "provider" => "facebook",
     "uid" => "123456",
     "info"=>
@@ -50,7 +51,7 @@ RSpec.configure do |config|
   end
   config.before(:each) do |example|
     DatabaseCleaner.strategy =
-    example.metadata[:js] ? :truncation : :transaction
+      example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
   end
   config.after(:each) do
