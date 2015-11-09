@@ -40,6 +40,7 @@ airport = [
 airport.each do |name, location|
   Airport.find_or_create_by(name: name, location: location)
 end
+
 date1 = Time.now + 13 * 86400
 date2 = Time.now + 7 * 86400
 date3 = Time.now + 4 * 86400
