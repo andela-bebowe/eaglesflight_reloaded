@@ -22,7 +22,6 @@ RSpec.feature "Flight search" do
   end
   scenario "select choice options for search and finds flight" do
     visit root_path
-    # save_and_open_page
     select("Kwasi", from: "Your take off point?" )
     select("Kasti", from: "Your destination?" )
     select("October 27, 2015", from: "Your flight date?" )
@@ -36,12 +35,18 @@ RSpec.feature "Flight search" do
   end
   scenario "selects unavailable flight" do
     visit root_path
-    # save_and_open_page
     select("Kwasi", from: "Your take off point?" )
     select("Kwasi", from: "Your destination?" )
     select("October 27, 2015", from: "Your flight date?" )
     select("2", from: "How many people" )
     click_button "SEARCH"
     expect(page).to have_content("No Flights in this category")
+  end
+  scenario "user wants to view all flights" do
+    visit root_path
+    click_link "ALL FLIGHTS"
+    expect(page).to have_content("All Flights")
+    expect(page.driver.status_code).to eq(200)
+    expect(page.current_path).to eq "/all_flights"
   end
 end

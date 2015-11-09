@@ -36,4 +36,10 @@ RSpec.describe BookingsController, type: :controller do
       response.should render_template :show
     end
   end
+  describe "#destroy" do
+    it "should delete the requested booking" do
+      booking = FactoryGirl.create(:booking)
+      expect { delete :destroy, id: booking }.to change(Booking, :count).by(-1)
+    end
+  end
 end

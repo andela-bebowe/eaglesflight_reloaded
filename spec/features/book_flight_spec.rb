@@ -31,6 +31,5 @@ RSpec.feature "Flight Booking" do
     expect(page.driver.status_code).to eq(200)
     expect(page.current_path).to eq "/bookings"
     expect(page).to have_content("Pay with Paypal")
-    # find(:xpath, "//a/img[@alt='Btn xpresscheckout']/..").click
   end
 end

@@ -8,10 +8,10 @@ RSpec.feature "Flight Booking" do
     FactoryGirl.create(:plane)
     FactoryGirl.create(:airline)
     visit root_path
-    select("Krum", from: "Your take off point?" )
-    select("Shaggy", from: "Your destination?" )
-    select("October 27, 2015", from: "Your flight date?" )
-    select("2", from: "How many people" )
+    select( "Krum", from: "Your take off point?" )
+    select( "Shaggy", from: "Your destination?" )
+    select( "October 27, 2015", from: "Your flight date?" )
+    select( "2", from: "How many people" )
     click_button "SEARCH"
   end
   scenario "when flight is not selected it should return to root_path" do
