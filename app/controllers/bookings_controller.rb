@@ -13,11 +13,26 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
-      flash[:success] = "Booking was successful."
-      redirect_to @booking
+      if @booking.paid_booking
+        store(@booking)
+        render "booking_payments"
+      else
+        flash[:success] = "You just got yourself a free booking"
+        redirect_to @booking
+      end
     else
       flash[:warning] = "Error occurred when booking!."
       render "new"
+    end
+  end
+
+  def find
+    @booking = Booking.find_booking(params)
+    if !@booking.blank?
+      redirect_to edit_booking_url(@booking.id)
+    else
+      flash[:warning] = "This booking does not exist."
+      redirect_to root_path
     end
   end
 

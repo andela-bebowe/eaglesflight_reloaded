@@ -21,7 +21,7 @@ module BookingsHelper
     def booking_params
       params.require(:booking).
       permit(:plane_id, :flight_id, :no_of_passengers, :user_id, :cost,
-      passengers_attributes: [:name, :email])
+      :paid_booking, passengers_attributes: [:name, :email])
     end
 
     def update_params

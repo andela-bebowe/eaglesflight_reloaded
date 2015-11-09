@@ -17,7 +17,7 @@ RSpec.describe BookingsController, type: :controller do
     it "should create a booking with passengers successfully" do
       post :create,booking: FactoryGirl.attributes_for(:booking_with_passengers)
 
-      expect(flash[:success]).to eq("Booking was successful.")
+      expect(flash[:success]).to eq("You just got yourself a free booking")
       expect(change(Booking, :booking).by (1))
       expect(response.status).to eq(302)
       expect(change(Booking, :booking).by (1))

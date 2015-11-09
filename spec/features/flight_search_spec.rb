@@ -4,7 +4,7 @@ RSpec.feature "Flight search" do
   before :all do
     FactoryGirl.create(:airport)
     FactoryGirl.create(:airport2)
-    FactoryGirl.create(:flight)
+    FactoryGirl.create(:flight2)
   end
   scenario "select boxes for destination and departure" do
     visit root_path

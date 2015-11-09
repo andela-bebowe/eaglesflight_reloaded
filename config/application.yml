@@ -4,12 +4,21 @@ GMAIL_PASSWORD: "password4eagles"
 SENDGRID_USERNAME: "app43156429@heroku.com"
 SENDGRID_PASSWORD: "gen2znfk9117"
 
-PAYPAL_USERNAME: "ladyb.eaglesflight_api1.gmail.com"
-PAYPAL_PASSWORD: "XB2NH5X9QXLPFZKW"
-PAYPAL_SIGNATURE: "AnCpg5MghXdC3awhKbJSpbnX.xrTAOANro2uqd73cu2ubGlFzfa0cG4u"
-
 Facebook_id: "804625862993283"
 Facebook_secret: "57c46fe2c87a1afc98b02a31d7e9f149"
 
 Twitter_key: "qfKMrSwI1tFYg2J1oVnLLzetJ"
 Twitter_secret: "ZR9HvMF8K5hoCt5rCzhp8isftnLLOHIfnxjWDAHe6rnFJhzB2X"
+
+development:
+  PAYPAL_USERNAME: ladyb.eaglesflight_api1.gmail.com
+  PAYPAL_PASSWORD: XB2NH5X9QXLPFZKW
+  PAYPAL_SIGNATURE: AnCpg5MghXdC3awhKbJSpbnX.xrTAOANro2uqd73cu2ubGlFzfa0cG4u
+  app_host: http://localhost:3000
+
+production:
+  PAYPAL_USERNAME: ladyb.eaglesflight-facilitator_api1.gmail.com
+  PAYPAL_PASSWORD: RM8TV3AVBUU9SZAW
+  PAYPAL_SIGNATURE: AFcWxV21C7fd0v3bYYYRCpSSRl31AvP4NJZRPC3xggvhStcSfSF7l5jd
+  app_host: https://eaglesflight-reloaded.herokuapp.com
+  notify_host: https://eaglesflight-reloaded.herokuapp.com

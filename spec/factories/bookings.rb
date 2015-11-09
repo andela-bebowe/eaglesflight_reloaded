@@ -8,7 +8,7 @@ FactoryGirl.define do
     cost 2000
     factory :booking_with_passengers do
       transient do
-        passengers_count 3
+        passengers_count 1
       end
       after(:create) do |booking, evaluator|
         create_list(:passenger, evaluator.passengers_count, booking: booking)

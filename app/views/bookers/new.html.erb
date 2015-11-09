@@ -1,0 +1,13 @@
+<h2 class="text-center">Confirm Booking</h2>
+<div class="form-wrapper findme">
+<%= form_for(@booker) do |f| %>
+  <%= render "layouts/errors", object: @booker %>
+  <%= f.hidden_field :express_token %>
+  <%= f.hidden_field :booking_id, value: current_booking.id %>
+  <p>Payer Name: <%=h @booker.first_name %> <%=h @booker.last_name %></p><br/>
+  <p>Number of tickets: <%=current_booking.no_of_passengers%></p><br/>
+  <p>Cost: <%=current_booking.cost%></p><br/>
+  <%= f.submit "Complete Booking", class: "btn btn-block btn-primary" %>
+  <%= link_to "Dont want to pay?", current_booking,class: "btn btn-block btn-danger" %>
+<%end%>
+</div>

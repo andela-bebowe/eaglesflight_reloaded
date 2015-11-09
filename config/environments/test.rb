@@ -30,23 +30,16 @@ Rails.application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
-
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-    OmniAuth.config.mock_auth[:facebook] = {
-      "provider" => "facebook",
-      "uid" => "123456",
-      "info"=>
-      { name: "Blessing Ebowe",
-        email: "blessingebowe@gmail.com",
-        profile_img: "http://graph.facebook.com/1065771400114300/picture"
-      }
-    }
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::BogusGateway.new
+  end
 end

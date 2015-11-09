@@ -3,6 +3,18 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def store(booking)
+    session[:booking] = booking
+  end
+
+  def current_booking
+    Booking.new(session[:booking])
+  end
+
+  def booking_completed
+    session.delete(:booking)
+  end
+
   def current_user
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)

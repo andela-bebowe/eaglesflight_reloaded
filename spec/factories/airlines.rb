@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :airline do
     name "Boeing"
-    price 10000
+    price BigDecimal.new('154.497')
+    id 1
   end
 
 end
