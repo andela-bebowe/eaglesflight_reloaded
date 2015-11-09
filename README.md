@@ -3,9 +3,10 @@
 [![Code Climate](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/gpa.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded)
 [![Test Coverage](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/coverage.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/coverage)
 
-This is a web app that can be used for Flight Booking and Management.
+
 ## Description
 
+* This is a web app that can be used for Flight Booking and Management.
 * EaglesFlight is hosted on [Heroku](https://eagles-flight.herokuapp.com)
 * It's a Flight management system for flight bookings, information and payments.
 * It can be used by both Registered and Unregistered users.
