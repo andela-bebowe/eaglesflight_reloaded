@@ -64,6 +64,6 @@ flight = [
 ]
 flight.each do |dept, dest, date, price|
   Flight.find_or_create_by(destination_id: dest, departure_id: dept,
-  departure_date: date + rand(34568..50689),
+  departure_date: date + rand(5200..12000),
   price: price)
 end

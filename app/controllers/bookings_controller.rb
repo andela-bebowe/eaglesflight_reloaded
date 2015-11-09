@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   include BookingsHelper
-  before_filter :authenticate, :except => [ :new, :create, :show ]
+  before_filter :authenticate, :except => [ :new, :create, :show, :destroy ]
   def new
     if params[:plane_id].blank?
       flash[:warning] = "Pick a flight"
