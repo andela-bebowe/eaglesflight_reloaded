@@ -1,4 +1,5 @@
-# EaglesFlight[![Coverage Status](https://coveralls.io/repos/andela-bebowe/eaglesflight_reloaded/badge.svg?branch=temp&service=github)](https://coveralls.io/github/andela-bebowe/eaglesflight_reloaded?branch=temp)
+# EaglesFlight
+[![Coverage Status](https://coveralls.io/repos/andela-bebowe/eaglesflight_reloaded/badge.svg?branch=temp&service=github)](https://coveralls.io/github/andela-bebowe/eaglesflight_reloaded?branch=temp)
 [![Code Climate](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/gpa.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded)
 [![Test Coverage](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/coverage.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/coverage)
 
