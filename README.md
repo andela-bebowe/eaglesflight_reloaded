@@ -1,4 +1,4 @@
-# EaglesFlight
+# EaglesFlight - Reloaded
 [![Coverage Status](https://coveralls.io/repos/andela-bebowe/eaglesflight_reloaded/badge.svg?branch=master&service=github)](https://coveralls.io/github/andela-bebowe/eaglesflight_reloaded?branch=master)
 [![Code Climate](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded/badges/gpa.svg)](https://codeclimate.com/github/andela-bebowe/eaglesflight_reloaded)
 
@@ -10,7 +10,7 @@
 * It can be used by both Registered and Unregistered users.
 
 
-## Usage
+## Features
 
 * When you visit the page you can you can either choose to Register/Login or not.
 * When on page you can choose location and destination of flight.
@@ -36,33 +36,42 @@
 5. Create a new Pull Request.
 
 
-## Development/Dependencies
+## Development Dependencies
 
-* This web app was built using Ruby on Rails.
-* And a rich library of gems from Ruby gems
-  *Omniauth for Authentication
-  *Figaro for Environment variables storage
-  *Bcrypt for Password security
-  *RSpec for testing.
+  * This web app was built using Rails framework.
+  * Omniauth for Authentication
+  * Bcrypt for Password security
+  * RSpec for testing.
 
-  Install Ruby
-  Install Rails
-  You also need to make sure that you have rubygems and bundler installed. RubyGems is a package management framework for Ruby and bundler is a ruby gem that helps to manage other external dependencies in a rails application
+## Usage
+  * Install Ruby
+  * Install Rails
+  * Install Rails
+  * Install Rspec
+  * Install Bundler
 
-  Install RubyGems
-  Install Bundler
-  Once you have a copy of this project and it's dependencies installed, you are good to go. run bundle to install all the required external dependencies
+ RubyGems is a package management framework for Ruby and bundler is a ruby gem that helps to manage other external dependencies in a rails application.
 
-  ** Note: To view the project in a web browser, you need to get the rails server up and running. Run rails server from the terminal and browse to the generated link from a web browser
+Once you have a copy of this project and it's dependencies installed, you are good to go.
+run bundle to install all the required external dependencies.
 
-  Running the Tests
+    $ bundle install
+
+ To view the project in a web browser, you need to get the rails server up and running. Run rails server from the terminal and browse to the generated link from a web browser.
+
+    $ rails s
+
+  ## Running the Tests
 
   If you have followed the steps outlined earlier, then you can run the tests for the project. You can run all tests from the terminal with this command:
 
-  rspec spec
-  If you need more specific tests, then specify the absolute path to the spec file:
+    $ rspec spec
 
-  rspec spec/models/link_spec.rb
+  If you need more specific tests, then specify the absolute path to the spec file.
+  Example for booking_controller spec:
+
+    $ rspec spec/controllers/booking_controller_spec.rb
+
   If you want the tests to read more like a document then pass in these options to the rspec command:
 
-  rspec spec --format doc
+    $ rspec spec --format doc
