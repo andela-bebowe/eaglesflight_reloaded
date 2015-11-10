@@ -15,21 +15,20 @@ airline.each do |name|
 end
 
 airport = [
-  ["Lagos Airport",         "Lagos"],
-  ["Abuja Airport",         "Abuja"],
-  ["Jos Airport",             "Jos"],
-  ["Benin Airport",         "Benin"],
-  ["Benue Airport",         "Benue"],
-  ["Malawi Airport",       "Malawi"],
-  ["Ghana Airport",         "Ghana"],
+  ["Lagos Airport", "Lagos"],
+  ["Abuja Airport", "Abuja"],
+  ["Jos Airport", "Jos"],
+  ["Benin Airport", "Benin"],
+  ["Benue Airport", "Benue"],
+  ["Malawi Airport", "Malawi"],
+  ["Ghana Airport", "Ghana"]
 ]
 airport.each do |name, location|
   Airport.find_or_create_by(name: name, location: location)
 end
 
 300.times do
-  Flight.find_or_create_by(destination_id: rand(1..6),
-  departure_id: rand(1..6),
-  departure_date: Time.now + (rand(5..7) * 86400) + rand(3600..70000),
+  Flight.find_or_create_by(destination_id: rand(1..6), departure_id: rand(1..6),
+  departure_date: Time.zone.now + (rand(5..7) * 86400) + rand(3600..70000),
   airline_id: rand(1..9), price: rand(10000..90000))
 end

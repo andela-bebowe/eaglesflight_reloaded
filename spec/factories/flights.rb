@@ -6,11 +6,9 @@ FactoryGirl.define do
     departure_date "2015-10-27"
     price 3456
     id 1
-
     factory :nil_flight do
       departure_id nil
       airline_id nil
-
     factory :flight2 do
       destination_id 2
       departure_id 1
