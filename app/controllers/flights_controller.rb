@@ -4,6 +4,6 @@ class FlightsController < ApplicationController
     @flight = Flight.search(params)
   end
   def all_flights
-    @flights = Flight.all.paginate(page: params[:page], per_page: 1)
+    @flights = Flight.all.paginate(page: params[:page], per_page: 8)
   end
 end

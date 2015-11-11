@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20151107102501) do
 
   create_table "airlines", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,19 +47,18 @@ ActiveRecord::Schema.define(version: 20151107102501) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "cost"
-    t.integer  "plane_id"
     t.datetime "booked_at"
     t.boolean  "paid_booking"
   end
 
   add_index "bookings", ["flight_id"], name: "index_bookings_on_flight_id"
-  add_index "bookings", ["plane_id"], name: "index_bookings_on_plane_id"
   add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "flights", force: :cascade do |t|
     t.integer  "destination_id"
     t.integer  "departure_id"
     t.datetime "departure_date"
+    t.integer  "airline_id"
     t.decimal  "price"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -86,17 +84,6 @@ ActiveRecord::Schema.define(version: 20151107102501) do
   end
 
   add_index "passengers", ["booking_id"], name: "index_passengers_on_booking_id"
-
-  create_table "planes", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "flight_id"
-    t.integer  "airline_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "planes", ["airline_id"], name: "index_planes_on_airline_id"
-  add_index "planes", ["flight_id"], name: "index_planes_on_flight_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

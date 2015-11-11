@@ -3,7 +3,6 @@ RSpec.feature "User authetication" do
   feature "User login and logout with facebook", :type => :feature do
     before do
       OmniAuth.config.test_mode = true
-      # Capybara.default_driver = :selenium
       OmniAuth.config.add_mock(:facebook, {:uid => "123456"})
     end
     scenario "with facebook" do

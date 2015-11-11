@@ -4,7 +4,6 @@ FactoryGirl.define do
     no_of_passengers 2
     flight_id 1
     user_id 1
-    plane_id 1
     cost 2000
     factory :booking_with_passengers do
       transient do
@@ -16,6 +15,6 @@ FactoryGirl.define do
     end
   end
   factory :invalid_booking, class: Booking do
-    plane_id nil
+    flight_id nil
   end
 end

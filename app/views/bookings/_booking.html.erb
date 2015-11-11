@@ -1,5 +1,6 @@
 <%dest = booking.flight_destination%>
 <%dept = booking.flight_departure%>
+<%airline = booking.flight_airline%>
 <div class="row booking">
   <h2 class="text-center">Booking Details</h2>
 <div class="col-sm-4 col-sm-offset-2  my-table">
@@ -30,11 +31,7 @@
     </tr>
     <tr>
       <td>Airline</td>
-      <td><%=booking.plane_airline%></td>
-    </tr>
-    <tr>
-      <td>Plane</td>
-      <td><%=booking.plane_name%></td>
+      <td><%=airline%></td>
     </tr>
     <tr>
       <td>No of Passengers</td>

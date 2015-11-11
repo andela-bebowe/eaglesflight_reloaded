@@ -23,16 +23,12 @@
           <td><%=@airline%></td>
         </tr>
         <tr>
-          <td>Plane</td>
-          <td><%=@plane.name%></td>
-        </tr>
-        <tr>
           <td>No of Tickets</td>
           <td><%=@num%></td>
         </tr>
         <tr>
           <td>Cost</td>
-          <td><%=cost = get_cost(@airline, @flight, @num)%></td>
+          <td><%=cost = get_cost(@flight, @num)%></td>
         </tr>
       </table>
   </div>
@@ -40,7 +36,6 @@
     <%= form_for @booking_form do |f| %>
       <%= render "layouts/errors", object: @booking_form %>
       <%= f.hidden_field :flight_id, value: @flight.id %>
-      <%= f.hidden_field :plane_id, value: params[:plane_id] %>
       <%= f.hidden_field :cost, value: cost %>
       <%= f.hidden_field :no_of_passengers, value: @num %>
       <%if logged_in?%>

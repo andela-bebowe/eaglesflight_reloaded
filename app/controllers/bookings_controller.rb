@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   include BookingsHelper
   before_filter :authenticate, :except => [ :new, :create, :show, :destroy ]
   def new
-    if params[:plane_id].blank?
+    if params[:flight_id].blank?
       flash[:warning] = "Pick a flight"
       redirect_to root_path
     else

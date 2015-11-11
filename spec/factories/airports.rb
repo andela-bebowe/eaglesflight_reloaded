@@ -18,6 +18,11 @@ FactoryGirl.define do
       location "Krum"
       id 4
     end
+    factory :invalid_airport do
+      name nil
+    end
+    factory :invalid_airport2 do
+      location nil
+    end
   end
-
 end

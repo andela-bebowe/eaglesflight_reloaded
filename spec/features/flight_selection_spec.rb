@@ -5,7 +5,6 @@ RSpec.feature "Flight Booking" do
     FactoryGirl.create(:airport3)
     FactoryGirl.create(:airport4)
     FactoryGirl.create(:flight)
-    FactoryGirl.create(:plane)
     FactoryGirl.create(:airline)
     visit root_path
     select( "Krum", from: "Your take off point?" )
@@ -21,7 +20,7 @@ RSpec.feature "Flight Booking" do
   end
   scenario "Pick flight of choice from the table" do
     # save_and_open_page
-    choose "plane_id_1"
+    choose "flight_id_1"
     click_button "Book chosen Flight"
     expect(page.driver.status_code).to eq(200)
     expect(page.current_path).to eq "/bookings/new"

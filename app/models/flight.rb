@@ -2,8 +2,10 @@ class Flight < ActiveRecord::Base
   belongs_to :destination, :class_name => "Airport"
   belongs_to :departure, :class_name => "Airport"
 
+  validates_presence_of :destination_id, :departure_id, :departure_date,
+  :airline_id
   has_many :bookings
-  has_many :planes
+  belongs_to :airline
 
   accepts_nested_attributes_for  :bookings, allow_destroy: true
 

@@ -5,7 +5,6 @@ RSpec.feature "Flight Booking" do
     FactoryGirl.create(:airport3)
     FactoryGirl.create(:airport4)
     FactoryGirl.create(:flight)
-    FactoryGirl.create(:plane)
     FactoryGirl.create(:airline)
     visit root_path
     select("Krum", from: "Your take off point?" )
@@ -13,7 +12,8 @@ RSpec.feature "Flight Booking" do
     select("October 27, 2015", from: "Your flight date?" )
     select("1", from: "How many people" )
     click_button "SEARCH"
-    choose "plane_id_1"
+    # save_and_open_page
+    choose "flight_id_1"
     click_button "Book chosen Flight"
     user = FactoryGirl.create(:user)
     fill_in "Name", with: (user.name)

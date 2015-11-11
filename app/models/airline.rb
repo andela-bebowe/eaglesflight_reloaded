@@ -1,8 +1,7 @@
 class Airline < ActiveRecord::Base
-  # Plane owner model
+  # Flight owners
   validates :name, presence: true
-  validates :price, presence: true
-  has_many :planes
+  has_many :flights
 
   def to_s
     "#{name}"

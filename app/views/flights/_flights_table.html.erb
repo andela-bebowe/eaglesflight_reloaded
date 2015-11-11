@@ -11,7 +11,6 @@
   <tr>
       <th>Pick</th>
       <th>Airlines</th>
-      <th>Planes</th>
       <th>Date of Departure</th>
       <th>Time of Departure</th>
       <th>Price for <%=num%></th>
@@ -19,17 +18,13 @@
 </thead>
   <tbody>
       <%flights.each do |flight|%>
-      <%(flight.planes).each do |plane|%>
-        <%airline = plane.airline%>
         <tr>
-          <td><%=radio_button_tag :plane_id, plane.id %></td>
-          <td><%=airline%></td>
-          <td><%=plane%></td>
+          <td><%=radio_button_tag :flight_id, flight.id %></td>
+          <td><%=flight.airline%></td>
           <td><%=date(flight)%></td>
           <td><%=time(flight)%></td>
-          <td><%=get_cost(airline, flight, num)%></td>
+          <td><%=get_cost(flight, num)%></td>
         </tr>
       <%end%>
-    <%end%>
   </tbody>
 </table>

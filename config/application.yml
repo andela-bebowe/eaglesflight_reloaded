@@ -1,9 +1,6 @@
 GMAIL_USERNAME: "ladyb.eaglesflight@gmail.com"
 GMAIL_PASSWORD: "password4eagles"
 
-SENDGRID_USERNAME: "app43156429@heroku.com"
-SENDGRID_PASSWORD: "gen2znfk9117"
-
 Facebook_id: "804625862993283"
 Facebook_secret: "57c46fe2c87a1afc98b02a31d7e9f149"
 
