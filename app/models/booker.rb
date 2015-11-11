@@ -22,7 +22,6 @@ class Booker < ActiveRecord::Base
   def cost_in_cents
     self.booking.cost.gsub(/\D/,'').to_i * 100
   end
-  
   private
     def express_purchase_options
       {

@@ -1,6 +1,6 @@
 module FlightsHelper
   def get_cost(flight, num)
-    number_to_currency((flight.price * num), :unit => "$")
+    number_to_currency((flight.price * num), unit: "$")
   end
   def airports
     Airport.locations
