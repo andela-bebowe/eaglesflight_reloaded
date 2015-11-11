@@ -4,7 +4,6 @@ RSpec.feature "Viewing past Bookings" do
   before :each do
     FactoryGirl.create(:booking_with_passengers)
     FactoryGirl.create(:flight)
-    FactoryGirl.create(:plane)
     FactoryGirl.create(:airline)
     OmniAuth.config.test_mode = true
     OmniAuth.config.add_mock(:facebook, { uid: "123456" })
@@ -19,13 +18,14 @@ RSpec.feature "Viewing past Bookings" do
     expect(page).to  have_content "Booking Id"
     expect(page).to  have_content "Ticket No"
     expect(page).to  have_content "Time"
+    # save_and_open_page
   end
   scenario "Logged in user wants to edit past booking" do
     visit findme_path
     expect(page).to  have_content "Booking Id"
     expect(page).to  have_content "Ticket No"
     fill_in "Booking Id", with: 1
-    fill_in "Ticket No", with: 5002
+    fill_in "Ticket No", with: 5001
     click_button "Find Booking"
     expect(page.driver.status_code).to eq(200)
     expect(page.current_path).to eq "/bookings/1/edit"

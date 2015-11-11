@@ -4,6 +4,7 @@ class CreateFlights < ActiveRecord::Migration
       t.integer :destination_id
       t.integer :departure_id
       t.datetime :departure_date
+      t.integer :airline_id
       t.decimal :price
 
       t.timestamps null: false

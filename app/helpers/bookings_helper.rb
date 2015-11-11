@@ -3,7 +3,7 @@ module BookingsHelper
     @booking_form = Booking.new
     @booking_form.passengers.build
     @num = params[:no_of_passengers].to_i
-    setup_plane
+    setup_flight
   end
 
   def no_of_passengers_arr
@@ -29,16 +29,10 @@ module BookingsHelper
       permit(passengers_attributes: [:name, :email, :id])
     end
 
-    def setup_plane
-      @plane  = Plane.find(params[:plane_id])
-      @airline = @plane.airline
-      @flight = @plane.flight
-      setup_airport
-    end
-
-    def setup_airport
+    def setup_flight
+      @flight = Flight.find(params[:flight_id])
       @dest = @flight.destination
       @dept = @flight.departure
+      @airline = @flight.airline
     end
-
 end

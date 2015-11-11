@@ -1,16 +1,14 @@
 class Booking < ActiveRecord::Base
-  before_save :create_ticket_no
+  before_create :create_ticket_no
 
-  delegate :destination, :departure,
+  delegate :destination, :departure, :airline,
   :to => :flight, :prefix => true
-  delegate :name, :airline, :to => :plane, :prefix => true
 
   has_one :booker
   belongs_to :user
-  belongs_to :plane
   belongs_to :flight
   has_many :passengers, inverse_of: :booking, dependent: :destroy
-  validates_associated :passengers
+  validates_associated :passengers, on: :create
 
   accepts_nested_attributes_for :passengers,
   reject_if: proc { |attributes| attributes['name'].blank? },
@@ -31,6 +29,6 @@ class Booking < ActiveRecord::Base
 
   private
     def create_ticket_no
-      self.ticket_no = self.plane_id + self.flight_id + 5000
+      self.ticket_no = self.flight_id + 5000
     end
 end

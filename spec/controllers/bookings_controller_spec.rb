@@ -33,7 +33,7 @@ RSpec.describe BookingsController, type: :controller do
     it "should render the show view" do
       booking = FactoryGirl.create(:booking)
       get :show, id: booking
-      response.should render_template :show
+      expect(response).to render_template :show
     end
   end
   describe "#destroy" do

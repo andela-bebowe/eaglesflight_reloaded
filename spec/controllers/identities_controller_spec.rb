@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe IdentitiesController, type: :controller do
   describe "get request to identity controller " do

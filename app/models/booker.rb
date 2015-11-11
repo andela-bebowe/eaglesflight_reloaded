@@ -18,9 +18,11 @@ class Booker < ActiveRecord::Base
       self.last_name = details.params["last_name"]
     end
   end
+
   def cost_in_cents
     self.booking.cost.gsub(/\D/,'').to_i * 100
   end
+  
   private
     def express_purchase_options
       {

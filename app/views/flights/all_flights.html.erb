@@ -1,13 +1,11 @@
 <%provide(:title, "All Flights")%>
 <h2 class="text-center">All Flights </h2>
-<%= will_paginate @flights, renderer: BootstrapPagination::Rails %>
-<%@flights.each do |flight|%>
 <%=form_tag new_booking_path, method: "get" do %>
   <div class="form-wrapper">
-    <%=render "flights/table", :flight => flight, num: 1 %>
-    <%=hidden_field_tag :no_of_passengers, 1%>
-    <button class="btn btn-block btn-mine" type="submit"
-    id="booker" name=nil>Book chosen Flight</button>
-  <% end %>
+  <%=hidden_field_tag :no_of_passengers, 1%>
+  <%=render "flights/table", :flights => @flights, num: 1 %>
+  <button class="btn btn-block btn-mine" type="submit"
+  id="booker" name=nil>Book chosen Flight</button>
+  <%= will_paginate @flights, renderer: BootstrapPagination::Rails %>
   </div>
 <% end %>

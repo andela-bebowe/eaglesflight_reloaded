@@ -30,7 +30,6 @@ RSpec.feature "Flight search" do
     expect(page).to have_content("Make a choice of Flight")
     expect(page).to have_content("Airlines")
     expect(page).to have_content("Price")
-    expect(page).to have_content("Planes")
     expect(page).to have_content("Price for 1")
   end
   scenario "selects unavailable flight" do
