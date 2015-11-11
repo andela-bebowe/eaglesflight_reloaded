@@ -17,7 +17,7 @@
   </tr>
 </thead>
   <tbody>
-      <%flights.each do |flight|%>
+    <%flights.each do |flight|%>
         <tr>
           <td><%=radio_button_tag :flight_id, flight.id %></td>
           <td><%=flight.airline%></td>
