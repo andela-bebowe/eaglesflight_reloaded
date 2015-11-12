@@ -6,19 +6,19 @@ RSpec.feature "Flight search" do
     FactoryGirl.create(:airport2)
     FactoryGirl.create(:flight2)
   end
+  after :each do
+    DatabaseCleaner.clean
+  end
   scenario "select boxes for destination and departure" do
     visit root_path
-    expect(page).to have_selector("#flight_departure_id"),
-    with_options: ["Konga"]
-    expect(page).to have_selector("#flight_destination_id"),
-    with_options: ["Konga"]
+    expect(page).to have_selector("#flight_departure_id", text: "Kwasi")
+    expect(page).to have_selector("#flight_destination_id", text: "Kasti")
   end
   scenario "select boxes for flight date, and number of people" do
     visit root_path
-    expect(page).to have_selector("#flight_departure_date"),
-    with_options: ["November 27, 2015"]
-    expect(page).to have_selector("#flight_booking_no_of_passengers"),
-    with_options: ["1"]
+    expect(page).to have_selector("#flight_departure_date",
+    text: "October 27, 2015")
+    expect(page).to have_selector("#flight_booking_no_of_passengers", text: "1")
   end
   scenario "select choice options for search and finds flight" do
     visit root_path

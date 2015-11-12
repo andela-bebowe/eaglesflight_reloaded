@@ -6,3 +6,7 @@ deployment:
 machine:
   ruby:
     version: 2.2.3
+test:
+  override:
+    - bundle exec rake spec
+    - rspec ./spec/view_bookings_spec.rb
