@@ -23,7 +23,7 @@ class BookersController < ApplicationController
     generate_items
     response = EXPRESS_GATEWAY.setup_purchase(current_booking.build_booker.cost_in_cents, ip: request.remote_ip,
     return_url: "#{@host}#{new_booker_path}",
-    cancel_return_url: "#{@host}#{root_path}",
+    cancel_return_url: "#{@host}#{root_url}",
     currency: "USD",
     allow_guest_checkout: true,
     item: [{name: "Eaglesflight Booking Ticket",

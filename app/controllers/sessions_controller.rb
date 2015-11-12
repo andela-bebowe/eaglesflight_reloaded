@@ -2,9 +2,10 @@ class SessionsController < ApplicationController
   def new
   end
   def create
-    user = User.from_omniauth(env["omniauth.auth"])
+    auth = request.env["omniauth.auth"]
+    user = User.from_omniauth(auth)
     log_in(user)
-    redirect_to root_path
+    redirect_to root_url
     flash[:success] = "Welcome #{current_user.name}, you are signed in!"
   end
   def failure
@@ -14,6 +15,6 @@ class SessionsController < ApplicationController
   def destroy
     flash[:info] = "#{current_user.name} you are signed out!"
     log_out
-    redirect_to root_path
+    redirect_to root_url
   end
 end

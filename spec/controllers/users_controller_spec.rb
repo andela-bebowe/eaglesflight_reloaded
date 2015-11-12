@@ -6,7 +6,6 @@ RSpec.describe UsersController, type: :controller do
       get :show
       expect(response).to have_http_status(:success)
     end
-
     it "renders the new template" do
       get :show
       expect(response).to render_template("show")
