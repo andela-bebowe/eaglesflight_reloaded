@@ -14,7 +14,7 @@ module BookingsHelper
     def authenticate
       if !logged_in?
         flash[:warning] = "You have to log in to perform this action!"
-        redirect_to root_path
+        redirect_to root_url
       end
     end
 
