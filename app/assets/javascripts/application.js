@@ -15,19 +15,19 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-
-
-$(document).ready(function(){
-  $("input[type = 'radio']").click(function(){
-    check_radio_clicked();
-  });
-
-});
-
-function check_radio_clicked() {
-  if($("input[type='radio']:checked").size() > 0){
-    $('#booker').prop('disabled', false);
-  }else{
-    $('#booker').prop('disabled', true);
-  }
-}
+// 
+//
+// $(document).ready(function(){
+//   $("input[type = 'radio']").click(function(){
+//     check_radio_clicked();
+//   });
+//
+// });
+//
+// function check_radio_clicked() {
+//   if($("input[type='radio']:checked").size() > 0){
+//     $('#booker').prop('disabled', false);
+//   }else{
+//     $('#booker').prop('disabled', true);
+//   }
+// }

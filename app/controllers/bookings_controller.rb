@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   def new
     if params[:flight_id].blank?
       flash[:warning] = "Pick a flight"
-      redirect_to root_path
+      redirect_to root_url
     else
       setup_booking_form
     end
@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
       redirect_to edit_booking_url(@booking.id)
     else
       flash[:warning] = "This booking does not exist."
-      redirect_to root_path
+      redirect_to root_url
     end
   end
 
@@ -44,7 +44,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     flash[:info] = "Booking #{@booking.id} has been cancelled"
     @booking.destroy
-    redirect_to root_path
+    redirect_to root_url
   end
 
   def update

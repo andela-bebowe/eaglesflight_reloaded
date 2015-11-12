@@ -3,10 +3,10 @@ require "rails_helper"
 RSpec.describe Flight, type: :model do
   describe Flight do
     it "does not create without departure_id/airline_id" do
-      FactoryGirl.build(:nil_flight).should_not be_valid
+      expect(FactoryGirl.build(:nil_flight)).not_to be_valid
     end
     it "creates with correct attributes" do
-      FactoryGirl.build(:flight).should be_valid
+      expect(FactoryGirl.build(:flight)).to be_valid
     end
     it "has one after creating one" do
       FactoryGirl.create(:flight)

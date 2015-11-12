@@ -15,12 +15,6 @@ RSpec.describe "routing to controllers", :type => :routing do
   it "does not expose a list of bookings" do
       expect(:get => "/bookings").not_to be_routable
   end
-  it "routes logout to Sessions controller delete action" do
-    expect(:get => "logout").to route_to(
-      :controller => "sessions",
-      :action => "destroy"
-    )
-  end
   it "routes /failure to sessions#failure" do
     expect(:get => "/failure").to route_to(
       :controller => "sessions",
@@ -42,5 +36,11 @@ RSpec.describe "routing to controllers", :type => :routing do
   end
   it "does not give access to identities#create" do
     expect(:get => "/identities").not_to be_routable
+  end
+  it "routes logout to Sessions controller delete action" do
+    expect(:get => "logout").to route_to(
+      :controller => "sessions",
+      :action => "destroy"
+    )
   end
 end

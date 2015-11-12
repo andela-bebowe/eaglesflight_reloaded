@@ -15,7 +15,7 @@ class Flight < ActiveRecord::Base
 
   def self.formatted_departure_date
     date = get_date
-    date.map{|date|date.strftime("%B %-d, %Y")}.uniq
+    date.map{|format|format.strftime("%B %-d, %Y")}.uniq
   end
 
   def self.search(params)
@@ -27,11 +27,10 @@ class Flight < ActiveRecord::Base
     end
   end
 
-  private
-    def self.assign_variables_for_search
-      date = @flight[:departure_date].to_date
-      @date = date.beginning_of_day..date.end_of_day
-      @dest_id = @flight[:destination_id]
-      @dept_id = @flight[:departure_id]
-    end
+  def self.assign_variables_for_search
+    date = @flight[:departure_date].to_date
+    @date = date.beginning_of_day..date.end_of_day
+    @dest_id = @flight[:destination_id]
+    @dept_id = @flight[:departure_id]
+  end
 end

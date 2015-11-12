@@ -6,7 +6,7 @@ RSpec.feature "Flight Booking" do
     FactoryGirl.create(:airport4)
     FactoryGirl.create(:flight)
     FactoryGirl.create(:airline)
-    visit root_path
+    visit root_url
     select("Krum", from: "Your take off point?" )
     select("Shaggy", from: "Your destination?" )
     select("October 27, 2015", from: "Your flight date?" )
@@ -18,6 +18,9 @@ RSpec.feature "Flight Booking" do
     user = FactoryGirl.create(:user)
     fill_in "Name", with: (user.name)
     fill_in "Email", with: (user.email)
+  end
+  after :each do
+    DatabaseCleaner.clean
   end
   scenario "Fill in correct passenger details and Submit" do
     click_button "SUBMIT"
