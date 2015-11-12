@@ -1,6 +1,14 @@
 require "rails_helper"
 
 RSpec.describe BookingsController, type: :controller do
+  before do
+    OmniAuth.config.test_mode = true
+    request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:facebook]
+  end
+  after :all do
+    get :log_out
+    DatabaseCleaner.clean
+  end
   describe "GET new" do
     it "should respond with a 302 status code" do
       get :new
@@ -10,7 +18,7 @@ RSpec.describe BookingsController, type: :controller do
       get :new, booking: FactoryGirl.attributes_for(:invalid_booking)
 
       expect(flash[:warning]).to eq("Pick a flight")
-      expect(response).to redirect_to root_path
+      expect(response).to redirect_to root_url
     end
   end
   describe "POST create" do

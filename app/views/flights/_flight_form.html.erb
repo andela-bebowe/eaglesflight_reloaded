@@ -1,7 +1,7 @@
 <h2 class="text-center">Search for a flight to that special city</h2>
 <div class="form-wrapper">
   <div class="row">
-     <%=form_for @flight_form, url: root_path, method: "get", class:"form-horizontal" do |f|%>
+     <%=form_for @flight_form, url: root_url, method: "get", class:"form-horizontal" do |f|%>
      <%= render "layouts/errors", object: @flight_form %>
       <div class="col-sm-12">
           <div class="row">

@@ -31,6 +31,8 @@ group :development, :test do
   gem "rspec-rails", "~> 3.0"
   gem "launchy", "~> 2.4"
   gem "letter_opener"
+  gem "simplecov"
+  gem "simplecov-json"
 end
 
 group :test do
