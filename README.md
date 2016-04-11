@@ -5,7 +5,7 @@
 ## Description
 
 * This is a web app that can be used for Flight Booking and Management.
-* EaglesFlight is hosted on [Heroku](https://eagles-flight.herokuapp.com)
+* EaglesFlight is hosted on [Heroku](http://eaglesflight-reloaded.herokuapp.com/)
 * It's a Flight management system for flight bookings, information and payments.
 * It can be used by both Registered and Unregistered users.
 
@@ -61,7 +61,8 @@ run bundle to install all the required external dependencies.
 
     $ rails s
 
-  ## Running the Tests
+
+## Running the Tests
 
   If you have followed the steps outlined earlier, then you can run the tests for the project. You can run all tests from the terminal with this command:
 

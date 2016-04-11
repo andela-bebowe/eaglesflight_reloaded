@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.2.3"
+ruby "2.3.0"
 
 gem "rails", "4.2.4"
 gem "figaro"
@@ -18,15 +18,15 @@ gem "turbolinks"
 gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "will_paginate-bootstrap"
-gem "bcrypt-ruby"
+gem "bcrypt"
 gem "omniauth-identity"
 gem "omniauth-twitter"
 gem "omniauth-facebook"
+gem 'web-console', group: :development
 group :development, :test do
   gem "byebug"
   gem "sqlite3"
   gem "pry"
-  gem "web-console", "~> 2.0"
   gem "spring"
   gem "rspec-rails", "~> 3.0"
   gem "launchy", "~> 2.4"

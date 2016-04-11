@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/bookings_controller.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/bookings_controller.rb": [
         1,
         1,
         1,
@@ -71,7 +71,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/flights_controller_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/flights_controller_spec.rb": [
         1,
         null,
         1,
@@ -99,7 +99,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/flights_controller.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/flights_controller.rb": [
         1,
         1,
         39,
@@ -110,7 +110,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/identities_controller_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/identities_controller_spec.rb": [
         1,
         null,
         1,
@@ -127,7 +127,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/sessions_controller_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
@@ -190,7 +190,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/sessions_controller.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -212,7 +212,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/users_controller_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -228,7 +228,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/users_controller.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/users_controller.rb": [
         1,
         1,
         3,
@@ -238,7 +238,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/book_flight_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/book_flight_spec.rb": [
         1,
         null,
         1,
@@ -278,7 +278,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/flight_search_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/flight_search_spec.rb": [
         1,
         null,
         1,
@@ -331,7 +331,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/flight_selection_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/flight_selection_spec.rb": [
         1,
         null,
         1,
@@ -364,7 +364,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/user_registration_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/user_registration_spec.rb": [
         1,
         1,
         1,
@@ -413,7 +413,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/view_bookings_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/features/view_bookings_spec.rb": [
         1,
         null,
         1,
@@ -484,24 +484,24 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/bookings_helper_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/bookings_helper_spec.rb": [
         1,
         1,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/flights_helper_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/flights_helper_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/mailers/user_mailer_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/mailers/user_mailer_spec.rb": [
         1,
         null,
         1,
@@ -556,7 +556,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/mailers/user_mailer.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/mailers/user_mailer.rb": [
         1,
         1,
         5,
@@ -573,13 +573,13 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/mailers/application_mailer.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/airline_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/airline_spec.rb": [
         1,
         null,
         1,
@@ -603,7 +603,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/airline.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/airline.rb": [
         1,
         null,
         1,
@@ -614,7 +614,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/airport_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/airport_spec.rb": [
         1,
         null,
         1,
@@ -642,7 +642,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/airport.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/airport.rb": [
         1,
         null,
         1,
@@ -660,7 +660,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/booking_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/booking_spec.rb": [
         1,
         null,
         1,
@@ -680,7 +680,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/flight_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/flight_spec.rb": [
         1,
         null,
         1,
@@ -722,7 +722,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/flight.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/flight.rb": [
         1,
         1,
         1,
@@ -760,7 +760,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/identity_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/models/identity_spec.rb": [
         1,
         null,
         1,
@@ -781,7 +781,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/identity.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/identity.rb": [
         1,
         2,
         1,
@@ -792,7 +792,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/routing/bookers_routing_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/routing/bookers_routing_spec.rb": [
         1,
         null,
         1,
@@ -807,7 +807,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/bookers_controller.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/controllers/bookers_controller.rb": [
         1,
         1,
         0,
@@ -858,7 +858,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/spec/routing/routes_spec.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/spec/routing/routes_spec.rb": [
         1,
         1,
         1,
@@ -906,7 +906,7 @@
         null,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/passenger.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/passenger.rb": [
         1,
         1,
         1,
@@ -916,7 +916,7 @@
         1,
         null
       ],
-      "/home/ladyb/Documents/Blessing_Documents/workspace/checkpts/eaglesflight_reloaded/app/models/user.rb": [
+      "/Users/ladyb/Documents/workspace/checkpts/eaglesflight_reloaded/app/models/user.rb": [
         1,
         1,
         1,
@@ -941,6 +941,6 @@
         null
       ]
     },
-    "timestamp": 1447361693
+    "timestamp": 1460368062
   }
 }
